@@ -22,44 +22,36 @@
 
 
 
-.accordion-new {
- 
-    
-   a{
-       
-       text-decoration: none;
-       
-   }
-    
-   dl {
-        
-     margin-bottom: 0px;   
-        
-    }
-    
+  .accordion.accordion-open span:before { 
+      font-family:'FontAwesome';
+    content: "\f068"; 
+  }
+  .accordion.accordion-close span:before { 
+     font-family:'FontAwesome';
+    content: "\f067"; 
+  }
 
-   dt, dd {
-       
+  .accordion-new {
+    padding-top: 20px;
+    margin-bottom: 0px;
+  }
 
-      padding: 10px 10px 10px 0px;
-       
-      font: 800 22px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
-      color: #666666;
- 
+  
 
-        }
-    
- 
-     dd{
-         
-         border-top: none;
- 
+  .content-section {
+    border-top: none;
+    padding-left: 5px;
+    position: relative;
+  }
 
-     }
-    
+  /* Accordion List */
+  .accordion-list{
+      
+        list-style-type: decimal;
+        font-size: 13px;
+  }
 
-}
-
+  
 
 
 
@@ -70,52 +62,46 @@
 
             %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
 
-
-
-/* Accordion List */
-
-.accordion-list{
-    
-    list-style-type: decimal;
-}
-
-
 /* Accordion Title */
+  .accordion-title {
+    padding: 0px 10px 0px 25px;
+    font: 800 22px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    cursor: pointer; 
+    cursor: hand;
+    position: relative;
+  }
 
-.accordian-title {
-     
-        text-decoration: none;
-        
+  .accordion-title-desc{
+    padding: 0px 10px 0px 0px;
+      font:200 14px/1.2em "pt-sans-regular",sans-serif;
+      color: #bbbbbb;
+      position: relative;
+      left: 25px;
+  }
 
+  .toggle-icon {
+    color:#FFB541;
+    position: absolute;
+    font-size: 1.2em;
+    padding: 5px 0px 10px 0px;
+    cursor: pointer; 
+    cursor: hand;
   }
 
 
-
-
-
 /* Accordion Link */
+  .accordion-link{
+      
+      font:200 14px/1.2em "pt-sans-regular",sans-serif;
+      line-height: 35px;
+     
+  }
 
+  .accordion-link:hover{
 
-.accordion-link{
-    
-    font:200 14px/1.2em "pt-sans-regular",sans-serif;
-    line-height: 35px;
-    text-decoration: underline;
-   
-}
-
-.accordion-link:hover{
-
-    text-decoration: underline;
-}
-
-
-.accordian-title-desc{
-    
-    font:200 14px/1.2em "pt-sans-regular",sans-serif;
-    color: #bbbbbb;
-    position: relative;
-    left: 0px;
-    
-}
+      text-decoration: underline;
+  }
 
