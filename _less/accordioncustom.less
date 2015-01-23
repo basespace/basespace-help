@@ -1,121 +1,86 @@
-/* %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%
 
-                                           Grey Box Holding Accordion
-
-            %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
-
-
-.accordian-holder {
-    
-        padding-top: 30px;
-        padding-bottom: 30px;   
-    
+.landing-page {
+  margin-top: 30px;
 }
-
 
 
 /* %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%
 
                                             Accordion
 
-            %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
+%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
 
+  /*toggle-icons*/
 
-
-.accordion-new {
- 
-    
-   a{
-       
-       text-decoration: none;
-       
+   .accordion-toggle.collapsed span:before { 
+        content:"\2b";
    }
-    
-   dl {
-        
-     margin-bottom: 0px;   
-        
-    }
-    
+   .accordion-toggle span:before { 
+        content:"\2212";
+   }
 
-   dt, dd {
-       
+  .accordion-new {
+    padding-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+  }
 
-      padding: 10px 10px 10px 0px;
-       
-      font: 800 22px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
-      color: #666666;
- 
+  
+  /* Accordion List */
+  .accordion-list{
+      
+        list-style-type: decimal;
+        font-size: 13px;
+  }
 
-        }
-    
- 
-     dd{
-         
-         border-top: none;
- 
-
-     }
-    
-
-}
-
-
-
-
-
+  
  /* %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%
 
                                             Accordion Title, Links
 
-            %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
-
-
-
-/* Accordion List */
-
-.accordion-list{
-    
-    list-style-type: decimal;
-}
-
+%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
 
 /* Accordion Title */
-
-.accordian-title {
-     
-        text-decoration: none;
-        
-
+  .accordion-title {
+    padding: 0px 10px 0px 25px;
+    font: 800 22px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    cursor: pointer; 
+    cursor: hand;
+    position: relative;
   }
 
+  .accordion-title:hover {
+    color: #328ed1;
+  }
 
-
-
-
-/* Accordion Link */
-
-
-.accordion-link{
-    
-    font:200 14px/1.2em "pt-sans-regular",sans-serif;
-    line-height: 35px;
-    text-decoration: underline;
-   
-}
-
-.accordion-link:hover{
-
-    text-decoration: underline;
-}
-
-
-.accordian-title-desc{
-    
-    font:200 14px/1.2em "pt-sans-regular",sans-serif;
+  .accordion-title-desc{
+    padding: 0px 10px 0px 0px;
+    font:200 14px/1.2em @font-text,sans-serif;
     color: #bbbbbb;
     position: relative;
-    left: 0px;
-    
-}
+    left: 25px;
+  }
+
+  .toggle-icon {
+    color:#FFB541;
+    position: absolute;
+    padding: 5px 0px 0px 0px;
+    cursor: pointer; 
+    cursor: hand;
+  }
+
+/* Accordion Link */
+  .accordion-link{
+      
+      font:200 14px/1.2em "pt-sans-regular",sans-serif;
+      line-height: 35px;
+     
+  }
+
+  .accordion-link:hover{
+      text-decoration: underline;
+  }
 

@@ -9,25 +9,32 @@
 /* MAIN CALLOUT BOX */
 
 
-.callout(@color){
+.callout(@color, @bg-color){
 padding: 20px 20px 20px 5px;
 margin: 20px 0;
-border: 1px solid #eee;
+border: 1px solid #eeeeee;
 border-left-width: 5px;
 border-radius: 3px;
 border-left-color: @color;
+background-color: @bg-color;
 }
 
 .callout_code {
-    
-    .callout(@vivid-blue-color)
+    .callout(@vivid-blue-color, @vivid-blue-bg)
 }
 
 .callout_troubleshoot {
-    
-    .callout(@earth-pumpkin-color)
+    .callout(@earth-pumpkin-color, @earth-pumpkin-bg)
 }
 
+.callout_note {
+    .callout(@note-green-color, @note-green-bg)
+}
+
+.bs-callout-box {
+    width: 100%;
+    float: right;
+}
 
 /* ******************************************** */
 
@@ -36,7 +43,6 @@ border-left-color: @color;
 
 
 .icon_display(@iconcolor){
- 
     color: @iconcolor;
     font-size: 30px;                //main icon
     position: relative;
@@ -45,19 +51,28 @@ border-left-color: @color;
 
 
 .callout_code_icon{
-    
-    .icon_display(@vivid-blue-color);  //red icon for code
-
+    .icon_display(@vivid-blue-color);  //blue icon for code
 }
 
 
 .callout_troubleshoot_icon{
-    
-    .icon_display(@earth-pumpkin-color);  //red icon for code
-
+    .icon_display(@earth-pumpkin-color);  //orange icon for troubleshoot
 }
 
+.callout_note_icon{
+    .icon_display(@note-green-color);  //green icon for note
+}
 
+.bs-callout-column-left {
+    float: left;
+    width: 10%;
+    padding-left: 3%;
+}
+
+.bs-callout-column-right {
+    float: left;
+    width: 90%;
+}
 
 /* ******************************************** */
 
@@ -65,25 +80,22 @@ border-left-color: @color;
 /* TITLE FOR CALL OUT BOX */
 
 .bs-callout-title(@colorheading) {
- 
     font:16px/1.2em @font-text, sans-serif;
-    padding: 10px 15px 0px 0px;
+    padding: 6px 15px 0px 0px;
     color: @colorheading;
     font-weight: bold;
-
-    
 }
 
-.bs-callout-tile-code{
-    
+.bs-callout-title-code{
     .bs-callout-title(@vivid-blue-color);
-    
 }
 
 .bs-callout-title-troubleshoot{
-    
     .bs-callout-title(@earth-pumpkin-color);
-    
+}
+
+.bs-callout-title-note{
+    .bs-callout-title(@note-green-color);
 }
 
 /* ******************************************** */
@@ -91,10 +103,10 @@ border-left-color: @color;
 
 /* CONTENT FOR CALLOUT */
 
-
 .bs-callout-content {
-    
-    font: 12px/1.2em @font-text, sans-serif;
-
-    }
+    font-size: 1.25em;
+    font-family: @font-text;
+    color: @font-color;
+    line-height: @line-gap;
+}
 

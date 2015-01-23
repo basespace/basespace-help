@@ -1,22 +1,44 @@
-<div class="bs-nav-titlebar">
-	<div class="container">
-		<div class="bs-nav-titlebar-group">
-			{% if page.section_root == null || page.section_root == false %}
-			<a class="btn illumina-gray bs-nav-back" href="{{ site.baseurl }}/articles/">
-				<span class="illumicons caret-left medium">
-				</span>
-				<span class="bs-nav-back-text">Articles</span>
-			</a>
-			{% else %}
-			<a class="btn illumina-gray bs-nav-back" href="{{ site.baseurl }}/">
-				<span class="illumicons caret-left medium">
-				</span>
-				<span class="bs-nav-back-text">Help Center</span>
-			</a>
-			{% endif %}
-			<h3 class="bs-nav-title">
-				<span class="bs-nav-title-text">{{ page.title }}</span>
-			</h3>
+<!--  Breadcrumbs bar just below the header  -->
+
+	<div class="row">
+		<div class="bs-nav-titlebar">
+
+			<div class="col-xs-2 title-left">
+				{% if (page.section_root == null || page.section_root == false) or page.layout == 'newb' %}
+
+					<!-- vertical line -->
+			        <div class="vertical-line"></div>
+
+		        	<a><div class="menu-box">
+			        <!-- burger icon -->
+			        	<span class="icon-menu menu-icon"></span>
+		       		</div></a>
+		        {% endif %}
+
+	        </div>
+
+			<div class="col-sm-9 col-xs-11">
+
+				<div class="bs-nav-titlebar-group">
+					{% if page.section_root == null || page.section_root == false %}
+					<a class="btn illumina-gray bs-nav-back" href="{{ site.baseurl }}/articles/">
+						<span class="illumicons caret-left medium">
+						</span>
+						<span class="bs-nav-back-text">Articles</span>
+					</a>
+					{% else %}
+					<a class="btn illumina-gray bs-nav-back" href="{{ site.baseurl }}/">
+						<span class="illumicons caret-left medium">
+						</span>
+						<span class="bs-nav-back-text">Help Center</span>
+					</a>
+					{% endif %}
+					<p class="bs-nav-title">
+						<span class="bs-nav-title-text">{{ page.title }}</span>
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+
+<!--  Breadcrumbs bar ends  -->

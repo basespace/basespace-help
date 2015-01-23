@@ -1,50 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body class="styling{% if page.is_homepage == true %}_home{% endif %}">
-	<!--      Top Navigation with BaseSpace & Illumina Logo
-		==================================================        -->
 
-<!-- <div class="header">
-		<div class="row">
-				<div class="col-lg-12">
-						<img class="image-header" width="1170px" src="{{ site.baseurl }}/images/BaseSpace_new_header.jpeg">
-				</div>
-		</div>
-	</div> -->
+	<!-- head section -->
+	{% include head.html %}
+	<!-- head section ends -->
 
-	  <div class="header">
-    <div class="container">
-            <a class="header-brand-baseSpace" href="{{ site.baseurl }}/">BaseSpace HelpCenter</span></a> <!-- custom css -->
-            <a class="header-brand-illumina" href="http://www.illumina.com/">illumina</span></a> <!-- custom css -->
-    </div>
-  </div>
+	<!-- body section begins -->
+	<body class="styling{% if page.is_homepage == true %}_home{% endif %}">
 
-{% if page.hide_welcome_banner == null || page.hide_welcome_banner == false %}
-	<div class="container-fluid banner-container">
-		<div class="row">
-				<div class="banner-custom">
-						<div class="container">
-							<div class="col-sm-6">
-								<h1 class="banner-text">HelpCenter</h1>
-								<p class="banner-p">Browse through our articles, forums, video and blog posts</p>
-							</div>
-							<div class="col-sm-6">
-									<div class="get-started">
-										<p class="gs-head">everything you need to quickly get going</p>
-										<a href="{{ site.baseurl }}/articles/getting-started/" class="button-secondary">Get Started <i class="glyphicon glyphicon-circle-arrow-right"></i></a>
+		<!--  Main container with all elements in the layout  -->
+ 		<div class="container-fluid">
+
+		  	<!-- header -->
+		  	<div class="header navbar-fixed-top">
+		  	    <a class="header-brand-baseSpace" href="{{ site.baseurl }}/">BaseSpace HelpCenter</span></a> 
+		  	    
+		  	    <a class="header-brand-illumina" href="http://www.illumina.com/">illumina</span></a> 
+		  	   <div id="custom_search">
+		  	    	<form id="searchbox_010275296426726970113:l7dpr8y7y3m" method="get" action="{{ site.baseurl }}/articles/searchresults/">
+					    <input value="010275296426726970113:l7dpr8y7y3m" name="cx" type="hidden"/>
+					    <input value="FORID:11" name="cof" type="hidden"/>
+					    <input id="q" name="q" size="75" type="text" value="" placeholder="Search BaseSpace Help ...."/>
+					</form> 
+					
+		  	    </div> 
+		  	    
+		   	</div> 
+		   	<!--header ends-->
+
+		   	<!-- banner -->
+				{% if page.hide_welcome_banner == null || page.hide_welcome_banner == false %}
+				
+            <!--      <div class="banner-container">
+						<div class="row">
+							<div class="banner-custom">
+								<div class="container">
+									<div class="col-sm-6">
+										<h1 class="banner-text">HelpCenter</h1>
+										<p class="banner-p">Browse through our articles, forums, video and blog posts</p>
 									</div>
+									<div class="col-sm-6">
+										<div class="get-started">
+											<p class="gs-head">everything you need to quickly get going</p>
+											<a href="{{ site.baseurl }}/articles/getting-started/" class="button-secondary">Get Started <i class="glyphicon glyphicon-circle-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+					</div>  -->
+    
+                    <div class="banner-container">
+                          <div class="row">
+                                <div class="banner-custom">
+                                    <div class="row">
+									    <div class="col-xs-8 col-xs-offset-2">
+									    	  <h1 class="banner-title">Welcome to our HelpCenter</h1>
+									    </div>
+                                    </div>        
+                                </div>
+                           </div>
+                    </div> 
+
+
+				{% endif %}
+			<!-- banner ends -->
+
+			<!-- page content -->
+			<div class="page-content">
+			{{ content }}
+			</div>
+			<!-- page content ends -->
+
+			<!-- footer -->
+			{% include foot.html %}
+		  	<!-- footer ends -->
+
 		</div>
-	</div>
-{% endif %}
+		<!-- Main container ends -->
 
-	<div class="page-content">
-	{{ content }}
-	</div>
-
-		{% include foot.html %}
 	</body>
+	<!-- body section ends -->
+
 </html>

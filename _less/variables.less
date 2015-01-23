@@ -2,7 +2,11 @@
 // @@@@@@@@@@@ GLOBAL     @@@@@@@@@@@
 // @@@@@@@@@@@ VARIABLES  @@@@@@@@@@@
 
+/* Bootstrap less customization */
+@grid-gutter-width: 0px;
 
+/* Responsive sizes */
+@media-xs-max: 767px;
 
 /*Colors for headers, banners, footers*/
 
@@ -12,16 +16,20 @@
 @bannergrey: #f2f2f2; //grey color for banner, callouts
 
 
-/* Call out colors */
-@vivid-blue-color: #5bc0de;        //code callout
+/* Callout colors */
+@vivid-blue-color: #5bc0de;        //code 
+@vivid-blue-bg: #EFF7F9;
 @earth-pumpkin-color: #f68920;     //Troubleshoot
+@earth-pumpkin-bg: #FFf2e6;
+@note-green-color: #BAC147;        //note
+@note-green-bg: #fdffe8;        
 
 /* FONTS */
-
 @font-header: "HelveticaNeueW01-ThinEx 710288"; //HelveticaNeue Font
-@font-text: "pt-sans-regular"; //PT Sans Font
-@font-color: #666667;  //Grey color for the font
-@link-color: #3fa9f5;
+@font-text: "Arial"; //Arial Font
+@font-color: #999999;  //Grey color for the font
+@link-color: #3fa9f5; // color for links
+@line-gap: 22px;
 
 /* Related Section Content */
 @border-color: #F2F2F2;
@@ -48,6 +56,7 @@
   src: url('fonts/glyphicons-halflings-regular.eot');
   src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
 .glyphicon {
   position: relative;
   top: 1px;

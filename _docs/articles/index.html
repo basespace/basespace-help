@@ -6,221 +6,280 @@ hide_welcome_banner: true
 ---
 {% include article-breadcrumbs.html %}
 
-<div class="accordian-container">
-
- <div class="container">
+<div class="landing-page">
 
      <div class="row">
-
-        <div class="sol-sm-12">
-
-             <h1 class="landingpage-title">Articles</h1>
-             <p class="landingpage-p">Everything in one place. Browse list of tutorials, walkthourghs and articles</p>
-
-             <hr class="landingpage-line">
+        <!-- intro banner -->
+        <div class="col-xs-8 col-xs-offset-2">
+          <div id="landingpage-main">
+            <h1 class="landingpage-title">Articles</h1>
+            <p class="landingpage-p">Browse list of tutorials, walkthourghs and articles</p>
+            <div class="landingpage-line"></div>
+          </div>
+             
         </div>
-
-
+        <!-- intro banner ends-->
      </div>
+      
 
+    <!-- main Section -->
+    <div class="row">  
+      <br>          
+        <!--accordion column-->
+        <div class="col-xs-8 col-xs-offset-2" id="column-main"> 
+            
+            <!-- accordion --> 
+            <div class="accordion-new" id="accordion">
+                
+                <!--section1 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div>    
+                          <p class="accordion-title">Basic</p>
+                      </div>
+                      <p class="accordion-title-desc">Read all the introductory articles about BaseSpace</p> 
+                 
+                  <div id="collapseOne" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                         <li><a href="/articles/descriptive/ui-overview/" class="accordion-link">Basespace UI Overview</a></li>
+                         <li><a href="#" class="accordion-link">BaseSpace Data Model Overview</a></li>
+                         <li><a href="/articles/descriptive/help-and-support/" class="accordion-link">Accessing Help, Feedback and Support</a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section1 ends-->
 
-  <!--       Article Body
-  ==================================================        -->
+                <!--section2 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">Data Organization and Management</p>
+                      </div>
+                      <p class="accordion-title-desc">Learn to manage your data and files in BaseSpace</p> 
+                 
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                         <li><a href="{{ site.baseurl }}/articles/tutorials/share-data-using-getlink/" class="accordion-link">How to share data using Get Link option</a></li>
+                         <li><a href="/articles/tutorials/share-data-using-email/" class="accordion-link">How to share data using Email option</a></li>
+                         <li><a href="/articles/tutorials/download-data-from-run/" class="accordion-link">How to download Data from a Run</a></li>
+                         <li><a href="/articles/tutorials/transfer-ownership/" class="accordion-link">How to transfer ownership</a></li>
+                         <li><a href="/articles/tutorials/delete-data-and-restore/" class="accordion-link">How to delete/restore data</a></li>
+                         <li><a href="/articles/tutorials/combine-samples/" class="accordion-link">How to combine samples</a></li>
+                         <li><a href="/articles/tutorials/create-a-new-project/" class="accordion-link">How to create a project</a></li>
+                         <li><a href="/articles/tutorials/edit-project-details/" class="accordion-link">How to edit project details</a></li>
+                         <li><a href="/articles/tutorials/copy-samples-to-another-project/" class="accordion-link">How to copy samples to another project</a></li>
+                         <li><a href="/articles/tutorials/launch-an-app/" class="accordion-link">How to launch an app</a></li>
+                         <li><a href="/articles/tutorials/switch-existing-account-to-new-credentials/" class="accordion-link">How to switch existing account to a new username/email</a></li>
+                         <li><a href="/articles/tutorials/purchase-icredits/" class="accordion-link">How to purchase iCredits</a></li>
+                         <li><a href="/articles/tutorials/requeue-analysis-for-run/" class="accordion-link">How to requeue analysis for run</a></li>
+                         <li><a href="/articles/tutorials/import-public-data/" class="accordion-link">How to import public data</a></li>
+                         <li><a href="/articles/tutorials/rename-an-analysis/" class="accordion-link">How to rename an Analysis</a></li>
+                         <li><a href="/articles/tutorials/search-usage/" class="accordion-link">How to use Search</a></li>
+                         <li><a href="/articles/tutorials/cancel-transfer-ownership/" class="accordion-link">How to cancel the transfer of ownership?</a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section2 ends-->
 
-        <!-- Introduction Section -->
+                <!--section3 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                         <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">Prep Tab</p>
+                      </div>
+                      <p class="accordion-title-desc">Understand the Prep Tab</p> 
+                 
+                  <div id="collapseThree" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                         <li><a href="/articles/descriptive/biological-samples/" class="accordion-link">Biological Samples tab</a></li>
+                         <li><a href="/articles/descriptive/libraries/" class="accordion-link">Libraries tab</a></li>
+                         <li><a href="/articles/descriptive/pools/" class="accordion-link">Pools tab</a></li>
+                         <li><a href="/articles/descriptive/planned-runs/" class="accordion-link">Planned runs tab</a></li>
+                         <li><a href="/articles/tutorials/create-new-biological-samples/" class="accordion-link">How to create new biological samples</a></li>
+                         <li><a href="/articles/tutorials/import-biological-samples/" class="accordion-link">How to import biological samples</a></li>
+                         <li><a href="/articles/tutorials/use-existing-biological-samples/" class="accordion-link">How to use existing biological samples</a></li>
+                         <li><a href="/articles/tutorials/prep-libraries/" class="accordion-link">How to prep libraries</a></li>
+                         <li><a href="/articles/tutorials/import-prep-libraries/" class="accordion-link">How to import prep libraries</a></li>
+                         <li><a href="/articles/tutorials/pool-libraries/" class="accordion-link">How to pool libraries</a></li>
+                         <li><a href="/articles/tutorials/plan-runs/" class="accordion-link">How to plan runs</a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section3 ends-->
 
-<div class="row">
+                <!--section4 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                          <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">Runs Monitoring</p>
+                      </div>
+                      <p class="accordion-title-desc">Everything about managing your runs in BaseSpace</p> 
+                 
+                  <div id="collapseFour" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                         <li><a href="/articles/descriptive/runs-overview/" class="accordion-link">Runs Overview</a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section4 ends-->
 
-    <div class="col-sm-8">
+                <!--section5 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                           <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">Analysis</p>
+                      </div>
+                      <p class="accordion-title-desc">Conduct analysis on your data</p> 
+                 
+                  <div id="collapseFive" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                         <li><a href="https://developer.basespace.illumina.com/docs/content/documentation/native-apps/native-app-overview" class="accordion-link">How can I put my own custom workflow into BaseSpace</a></li>
+                         <li><a href="https://developer.basespace.illumina.com/docs/content/documentation/getting-started/overview#Get_started" class="accordion-link">How do I develop apps for BaseSpace</a></li>
+                         <li><a href="https://developer.basespace.illumina.com/docs/content/documentation/guidelines-terms/publishing-guide" class="accordion-link">How do I publish an app on Basespace</a></li>
+                         <li><a href="/articles/tutorials/upload-data-using-web-uploader/" class="accordion-link">How to Upload data using the web uploader</a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                         <li><a href="#" class="accordion-link"></a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section5 ends-->
 
-         <div class="accordian-holder">
+                <!--section6 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                          <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">Public Data</p>
+                      </div>
+                      <p class="accordion-title-desc">Test BaseSpace with the use of Public Data</p> 
+                 
+                  <div id="collapseSix" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                          <li><a href="articleCode.html" class="accordion-link">Using the Multi-Part File Upload API</a></li>
+                          <li><a href="#" class="accordion-link">How to use BaseSpace Apps (Native vs. Web, ILMN vs. third party)</a></li>
+                          <li><a href="#" class="accordion-link">How can I put my own custom workflow into BaseSpace?</a></li>
+                          <li><a href="#" class="accordion-link">How do I develop apps for BaseSpace?</a></li>
+                          <li><a href="#" class="accordion-link">How do I publish an app on Basespace?</a></li>
+                          <li><a href="#" class="accordion-link">What’s the difference between launching apps from Apps page vs. within project?</li>
+                          <li><a href="#" class="accordion-link">How to re-queue analysis for a Run in BaseSpace?</a></li>
+                          <li><a href="#" class="accordion-link">How to view sample sheet?</a></li>
+                          <li><a href="#" class="accordion-link">How to rename analysis?</a></li>
+                          <li><a href="#" class="accordion-link">How to import public data?</a></li>
+                          <li><a href="#" class="accordion-link">How to filter Apps?</a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section6 ends-->
 
-              <dl class="accordion-new">
+                <!--section7 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                          <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">BaseSpace ONSITE</p>
+                      </div>
+                      <p class="accordion-title-desc">All updates about BaseSpace's version off the cloud</p> 
+                 
+                  <div id="collapseSeven" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                          <li><a href="#" class="accordion-link">Article 1</a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section7 ends-->
 
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-one">Basic</dt>
-                    <p class="accordian-title-desc">Read all the introductory articles about BaseSpace</p>
-                    <!-- <div class="caret-holder">
-                        <span class="icon-arrow-right caret-right-accordion"></span>
-                    </div> -->
-                    </a>
-
-                    <dd>
-                        <ul class="accordion-list">
-                            <li><a href="{{ site.baseurl }}/articles/basespace-intro/" class="accordion-link">Introduction to BaseSpace</a></li>
-                            <li><a href="#" class="accordion-link">What can I do from the dashboard?</a></li>
-                            <li><a href="#" class="accordion-link">How do I purchase iCredits?</a></li>
-                            <li><a href="#" class="accordion-link">How to access help?</a></li>
-                            <li><a href="#" class="accordion-link">How to leave feedback?</a></li>
-                            <li><a href="#" class="accordion-link">How to request support?</a></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-two">Data Organization and Management</dt>
-                    <p class="accordian-title-desc">Learn to manage your data and files in BaseSpace</p>
-
-                    </a>
-                    <dd>
-                        <ul class="accordion-list">
-                            <li><a href="articleTutorial.html" class="accordion-link">How to Download data from BaseSpace</a></li>
-                            <li><a href="#" class="accordion-link">How to Share Data in BaseSpace</a></li>
-                            <li><a href="#" class="accordion-link">How to Transfer Data in BaseSpace</a></li>
-                            <li><a href="#" class="accordion-link">How to Delete Data from BaseSpace</a></li>
-                            <li><a href="#" class="accordion-link">How to Upload a Run to BaseSpace from a Sequencer (Prep Tab and On-Instrument)</a></li>
-                            <li><a href="#" class="accordion-link">How to Upload data to a Project in BaseSpace (command line and web uploader)</a></li>
-                            <li><a href="#" class="accordion-link">How to copy samples to another project?</a></li>
-                            <li><a href="#" class="accordion-link">How to combine samples?</a></li>
-                            <li><a href="#" class="accordion-link">How to rename a project?</a></li>
-                            <li><a href="#" class="accordion-link">How do I know who has share access to my project?</a></li>
-                            <li><a href="#" class="accordion-link">How to download SAV data?</a></li>
-                           <li> <a href="#" class="accordion-link">How to create a project?</a></li>
-                            <li><a href="#" class="accordion-link">How to add a description to a project?</a></li>
-                           <li> <a href="#" class="accordion-link">What’s the difference between sharing via email vs. via link?</a></li>
-                            <li><a href="#" class="accordion-link">How to tell how much space used/available?</a></li>
-                           <li> <a href="#" class="accordion-link">What are the different access levels between sharees and owners of projects/runs?</a></li>
-                           <li> <a href="#" class="accordion-link">How to cancel a share or transfer request?</a></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-three">Prep Tab</dt>
-                    <p class="accordian-title-desc">Understand the Prep Tab</p>
-                    </a>
-
-                    <dd>
-                        <ul class="accordion-list">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-four">Runs Monitoring</dt>
-                    <p class="accordian-title-desc">Everything about managing your runs in BaseSpace</p>
-                    </a>
-                    <dd>
-                        <ul class="accordion-list">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-five">Analysis</dt>
-                    <p class="accordian-title-desc">Conduct analysis on your data</p>
-                    </a>
-                    <dd>
-                        <ul class="accordion-list">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-six">Public Data</dt>
-                    <p class="accordian-title-desc">Test BaseSpace with the use of Public Data</p>
-                    </a>
-                    <dd>
-                        <ul class="accordion-list">
-                            <li><a href="articleCode.html" class="accordion-link">Using the Multi-Part File Upload API</a></li>
-                            <li><a href="#" class="accordion-link">How to use BaseSpace Apps (Native vs. Web, ILMN vs. third party)</a></li>
-                            <li><a href="#" class="accordion-link">How can I put my own custom workflow into BaseSpace?</a></li>
-                            <li><a href="#" class="accordion-link">How do I develop apps for BaseSpace?</a></li>
-                            <li><a href="#" class="accordion-link">How do I publish an app on Basespace?</a></li>
-                            <li><a href="#" class="accordion-link">What’s the difference between launching apps from Apps page vs. within project?</li>
-                            <li><a href="#" class="accordion-link">How to re-queue analysis for a Run in BaseSpace?</a></li>
-                            <li><a href="#" class="accordion-link">How to view sample sheet?</a></li>
-                            <li><a href="#" class="accordion-link">How to rename analysis?</a></li>
-                            <li><a href="#" class="accordion-link">How to import public data?</a></li>
-                            <li><a href="#" class="accordion-link">How to filter Apps?</a></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-                    <a href="" class="accordian-title">
-                    <dt class="accordian-title-seven">Policies and Terms</dt>
-                    <p class="accordian-title-desc">Read our policies and terms and conditions</p>
-                    </a>
-                    <dd>
-                        <ul class="accordion-list">
-                            <li><a href="#" class="accordion-link">Eula</a></li>
-                            <li><a href="#" class="accordion-link">Privacy Policy</a></li>
-                           <li> <a href="#" class="accordion-link">App T/Cs</a></li>
-                           <li> <a href="#" class="accordion-link">Sharing and Transfer Policy</a></li>
-                           <li> <a href="#" class="accordion-link">Delete Policy</a></li>
-                           <li><a href="#" class="accordion-link"> Purchase/Refund Policy</a></li>
-                           <li> <a href="#" class="accordion-link">How does Illumina use my data?</a></li>
-                            <li><a href="#" class="accordion-link">Security document</a></li>
-                        </ul>
-                    </dd>
-                    <hr>
-
-            </dl>
-
-
-
-           </div>
-
-
-
-            </div><!-- /column ends -->
-
-<div class="col-sm-3 col-sm-offset-1">
-
-
-          <div class="block-sidebar-forums">
-
-              <span class="sidebar-heading"><a href="#">Visit Forums</a></span>
-
-              <div>
-
-                      <p class="sidebar-content">Engage with the BaseSpace community, suggest ideas or get help</p>
-
-              </div>
-
-
-
-          </div>
-
-
-          <div class="block-sidebar-git">
-
-
-              <span class="sidebar-heading"><a href="#">Contribute to this Page</a></span>
-
-               <div >
-
-                   <p class="sidebar-content">Suggest content or modifications to this page</p>
-
-              </div>
-
-
-
-          </div>
-
-
-
-
-
-
-    </div><!-- /.blog-sidebar -->
-
-
-
-
-        </div><!-- /.row -->
-
+                <!--section8 begins-->
+                <div class="panel">
+                  
+                      <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                          <div class="toggle-icon"><span class="glyphicon glyphicon-plus"></span></div> 
+                          <p class="accordion-title">Policies and Terms</p>
+                      </div>
+                      <p class="accordion-title-desc">Read our policies and terms and conditions</p> 
+                 
+                  <div id="collapseEight" class="panel-collapse collapse">
+                      <ul class="accordion-list">
+                           <li><a href="https://basespace.illumina.com/agreements/toc" class="accordion-link">EULA</a></li>
+                           <li><a href="https://basespace.illumina.com/agreements/privacy" class="accordion-link">Privacy Policy</a></li>
+                           <li><a href="https://basespace.illumina.com/agreements/developerandpublishing" class="accordion-link">App T/Cs</a></li>
+                           <li><a href="https://basespace.illumina.com/agreements/store" class="accordion-link">iCredits Purchase Policy</a></li>
+                           <li><a href="http://res.illumina.com/documents/products/technotes/technote_basespace_security.pdf" class="accordion-link">Security document</a></li>
+                      </ul>
+                  </div>
+               
+                </div> <!--section8 ends-->
+             
+            </div>
+            <!-- accordion ends -->
+         
         </div>
+        <!-- accordion column ends -->
 
-        </div><!-- /.container -->
+      <!--commenting out the sidebar - - temporarily
+
+       <div class="col-sm-4"> <!sidebar section
+   
+            <div class="block-sidebar">
+
+                <span class="sidebar-heading">Popular Articles</span> 
+
+                <div class="sidebar-content">
+                    <ul>
+                       <li><a href="/articles/ui-overview/" class="popular-link">Basespace UI Overview</a></li>
+                       <li><a href="#" class="popular-link">BaseSpace Data Model Overview</a></li>
+                       <li><a href="/articles/help-and-support/" class="popular-link">Accessing Help, Feedback and Support</a></li>
+                       <li><a href="#" class="popular-link">How to share data on Basespace?</a></li>
+                    </ul>
+                </div>
+          
+            </div>
+          
+          <! commented out for future use, when discourse forums are integrated
+
+            <div class="block-sidebar">
+    
+                <span class="sidebar-heading">Popular Forums</span> 
+      
+                 <div class="sidebar-content">
+                    <ul>
+                       <li>
+                          <a href="#" class="forum-title">Discussion A</a>
+                          <p class="forum-detail"><span class="glyphicon glyphicon-user"></span> By Person, 01/01/2014</p>
+                       </li>
+                       <li>
+                          <a href="#" class="forum-title">Discussion B</a>
+                          <p class="forum-detail"><span class="glyphicon glyphicon-user"></span> By Person, 01/01/2014</p>
+                       </li>
+                       <li>
+                          <a href="#" class="forum-title">Discussion C</a>
+                          <p class="forum-detail"><span class="glyphicon glyphicon-user"></span> By Person, 01/01/2014</p>
+                       </li>
+                       <li>
+                          <a href="#" class="forum-title">Discussion D</a>
+                          <p class="forum-detail"><span class="glyphicon glyphicon-user"></span> By Person, 01/01/2014</p>
+                       </li>
+                    </ul>
+                    <br>
+                    <a href="#">See all forums >></a>
+                 </div>
+        
+            </div>
+            
+         
+         
+       </div><!sidebar ends--> 
+
+    </div>
+    <!-- main section row ends -->
+  
+</div>

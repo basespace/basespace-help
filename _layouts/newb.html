@@ -1,0 +1,61 @@
+---
+layout: default
+hide_welcome_banner: true
+---
+<!--  Breadcrumb bar  -->
+{% include article-breadcrumbs.html %}
+<!--  Breadcrumb bar ends  -->
+
+  <!--  Row begins  -->
+  <div class="row">
+  
+    <!-- Side Nav Bar -->
+      <nav class="bs-docs-sidebar">
+        {% if page.headings and page.headings.size > 0 %}
+          <ul id="sidenav" class="nav nav-stacked col-sm-2" data-spy="affix">
+          {% for t in page.headings %}
+            {% if t.Level == 2 %}
+              <li>
+                <a href="#{{ t.Id }}">{{ t.Text }}</a>
+                {% if t.children and t.children.size > 0 %}
+                  <ul class="nav nav-stacked">
+                  {% for child in t.children %}
+                    {% if child.Level == 3 %}
+                    <li>
+                      <a href="#{{ child.Id }}">{{ child.Text }}</a>
+                    </li>
+                    {% endif %}
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </nav>
+    <!-- Side Nav Bar ends -->
+
+    <!--  New to Basespace content begins  -->
+    <div class="col-xs-8 col-sm-offset-2 main-layout">
+
+      <!-- Article Header -->
+      <h2 class="newb-title">{{ page.title }}</h1>
+      <!-- Article Header ends -->
+
+      <!-- Article Body -->
+      <div class="newb-content">
+        {{ content }}
+      </div> 
+      <!-- Article-body ends -->
+
+    </div>
+    <!--  New to Basespace content ends  -->
+
+    <div class="clearfix"></div>
+
+  </div>
+  <!--  Row ends  -->
+
+<!--  container ends -->
+

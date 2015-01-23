@@ -2,8 +2,9 @@
 
 
 .bs-nav-titlebar {
-background: none repeat scroll 0 0 #ededed;
-position: relative;
+background: #ededed;
+position: fixed;
+top: 65px;
 clear: both;
 height: 36px;
 left: 0;
@@ -11,6 +12,7 @@ line-height: 36px;
 padding-right: 20px;
 width: 100%;
 z-index: 1;
+border-bottom: 1px solid #bbbbbb;
 }
 
 .bs-nav-titlebar-group {
@@ -94,7 +96,77 @@ user-select: none;
 }
 
 .bs-nav-back-text {
-    
- padding-left: 7px;
-    
+  padding-left: 3px;
+}
+
+
+
+.title-left {
+	margin-right: -18px;
+	margin-left: 18px;
+	padding-right: 0px;
+
+	@media all and (max-width: @media-xs-max) {
+		display: none;
+	}
+}
+
+.menu-box {
+	float: right;
+	background-color: #ededed;;
+   	border-radius: 3px;
+  	width: 25px;
+   	height: 25px;
+   	color: #adadad;
+	font-size: 1em;
+	position: relative;
+	text-align: center;
+	margin-top: 5px;
+	margin-left: 10px;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.menu-box:hover {
+   background-color: #e4e4e4;
+}
+
+.menu-box-selected {
+   background-color: #e4e4e4;
+   border: 1px solid #cccccc;
+   cursor: pointer; 
+   cursor: hand;
+}
+
+.menu-icon {
+	top: 5px;
+	left: 5px;
+	position: absolute;
+	text-decoration: none;
+	z-index: 10;
+}
+
+.menu-icon:hover {
+   background-color: #e4e4e4;
+}
+
+.vertical-line {
+	border-right: 1px solid #d7d7d7;
+	height: 22px;
+	float: right;
+	width: 1px;
+	margin-top: 6px;
+	margin-left: 2px;
+}
+
+.vertical-line-toggle {
+	visibility: hidden;
+}
+
+.button:hover {
+   background-color: rgba(228,228,228,1);
+   border: solid 1px rgba(204,204,204,1);
+   color: rgba(0,0,0,1);
+}
+.button:active {
 }

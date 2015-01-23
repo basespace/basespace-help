@@ -49,24 +49,68 @@ Naming Conventions
 
 1. Image name: Image names shall be in the following format, 
   + The name should reflect the clear description of the image. Abbrevations for words are not allowed (Eg. proj for project or dwnld for download, etc.).
-  + It should contain the image width and height in pixels. 
   + Only lower case letters should be used. Numbers may be included if necessary. 
-  + Underscores should be used as separators between *description and size*. Hyphens shall be used to separate multiple words in image names.
+  + Hyphens shall be used to separate multiple words in image names.
+  + [optional] The name might contain the image width and height in pixels, if that is necessary. If so, underscores should be used as separators between *description and size*.
 
-   Format:    **description-of-image_widthxheight.png**
+   Format:    **description-of-image[_widthxheight].png**
    
    For Eg: share-run-using-email-step-1_672x320.png
   
   + Images shall be saved under appropriate folders under the "images" folder of the site. This folder should be a high level category for the image like 'projects' or 'app-store'.
 
-    For Eg: */images/runs/share-run-using-email-step-1_672x320.png*
-            */images/projects/share-project-using-getlink-step-1_672x320.png*
+    For Eg: */images/runs/share-run-using-email-step-1.png*
+            */images/projects/share-project-using-getlink-steps.png*
 
 2. Image file format: All static images should be in,
   + *.PNG (Portable Network Graphics)* format. 
   + In case of photos or animated GIFs .JPG or .JPEG and .GIF formats can be used.
 
-3. Image size: The size of the images shall be within the following range (in pixels),
+3. Image size: The size of the images is suggested to keep within 800px(width) for optimization purposes.
 
-  + Width : between 411px (min) and 767px (max) 
-  + Height : between 154px (min) and 485px (max)
+ 
+Guidelines for writing articles
+-------------------------------
+
+All the articles are stored under the '_docs' folder in their respective categories. Each articles can belong to one of the two categories: 
+
++ Descriptive : Articles which are descriptive in nature, not having any kind of walk through tuorials, but only text and images/screenshots supporting it.
++ Tutorials : Articles that are clearly walkthrough tutorials, with step by step description along with screenshots/images.
+
+Though all articles are written in 'markdown(.md)' format, the following are some of the additional points to keep in mind:
+
+1. Headings and sub-headings must have the following format.
+    
+  + Title of the article : Should mention it in the YAML front matter in the beginning of the article.
+  + Main Headings : H2
+  + Sub heading 1 : H3
+  + Sub heading 2 : H4
+
+2. All images/screenshots should be enclosed in the following liquid tag format:
+
+  {% screenshot full-image-path/myscreenshot.png %}
+
+3. In case of tutorial articles, each step must follow this format:
+
+  {% step 1, images/myimage.png, This is The title %}
+    This is the description
+  {% endstep %}
+
+4. If there is a callout like a special note or tip, there are some ready call-outs to use.
+
+  Code: 
+        {% callout code, Title Here %}
+          // Your code here
+        {% endcallout %}
+
+  Troubleshooting:
+        {% callout troubleshoot, Title Here %}
+          This is description
+        {% endcallout %}
+
+  Note/Tips:
+        {% callout note, Title Here %}
+          This is description
+        {% endcallout %}
+
+
