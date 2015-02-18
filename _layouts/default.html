@@ -11,48 +11,29 @@
 		<!--  Main container with all elements in the layout  -->
  		<div class="container-fluid">
 
-		  	<!-- header -->
+		  	<!-- header -->		  	
 		  	<div class="header navbar-fixed-top">
-		  	    <a class="header-brand-baseSpace" href="{{ site.baseurl }}/"><b>BaseSpace</b><sup><sup>&reg;</sup></sup> HelpCenter</a> 
-		  	    
-		  	    <a href="http://www.illumina.com/" target="_newtab">
-		  	    	<div class="header-brand-illumina" src="/images/ILLUMINA_LOGO.png"></div>
-		  	    </a> 
-		  	    
-		  	    <div id="custom_search">
-		  	    	<form id="searchbox_010275296426726970113:l7dpr8y7y3m" method="get" action="{{ site.baseurl }}/articles/searchresults/">
-					    <input value="010275296426726970113:l7dpr8y7y3m" name="cx" type="hidden"/>
-					    <input value="FORID:11" name="cof" type="hidden"/>
-					    <input id="q" name="q" size="75" type="text" value="" placeholder="Search BaseSpace Help ...."/>
-					</form> 
-					
-		  	    </div> 
-		  	    
-		   	</div> 
+		  		<div class="col-xs-8 col-sm-offset-2">
+			  	    <a class="header-brand-baseSpace" href="{{ site.baseurl }}/"><b>BaseSpace</b><sup><sup>&reg;</sup></sup> HelpCenter</a> 
+			  	    
+			  	    <a href="http://www.illumina.com/" target="_blank">
+			  	    	<div class="header-brand-illumina" src="/images/ILLUMINA_LOGO.png"></div>
+			  	    </a> 
+			  	 
+			  	    <div id="custom_search">
+			  	    	<form id="searchbox_010275296426726970113:l7dpr8y7y3m" method="get" action="{{ site.baseurl }}/articles/searchresults/">
+						    <input value="010275296426726970113:l7dpr8y7y3m" name="cx" type="hidden"/>
+						    <input value="FORID:11" name="cof" type="hidden"/>
+						    <input id="q" name="q" size="35" type="text" value="" placeholder="Search BaseSpace Help ...."/>
+						</form> 
+					</div> 
+		  	 	</div>   
+	   		</div> 
 		   	<!--header ends-->
 
 		   	<!-- banner -->
 				{% if page.hide_welcome_banner == null || page.hide_welcome_banner == false %}
 				
-            <!--      <div class="banner-container">
-						<div class="row">
-							<div class="banner-custom">
-								<div class="container">
-									<div class="col-sm-6">
-										<h1 class="banner-text">HelpCenter</h1>
-										<p class="banner-p">Browse through our articles, forums, video and blog posts</p>
-									</div>
-									<div class="col-sm-6">
-										<div class="get-started">
-											<p class="gs-head">everything you need to quickly get going</p>
-											<a href="{{ site.baseurl }}/articles/getting-started/" class="button-secondary">Get Started <i class="glyphicon glyphicon-circle-arrow-right"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>  -->
-    
                     <div class="banner-container">
                           <div class="row">
                                 <div class="banner-custom">

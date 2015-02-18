@@ -10,7 +10,7 @@
   font: 100 5em @font-header, sans-serif;
   color: #BE74AE;
   letter-spacing: 1px;
-  margin-top: 0px;
+  margin-top: 35px;
 }
 
 .newb-content {
@@ -70,6 +70,14 @@
      font: 100 1.2em @font-text;
      padding-top: 12%;
      color: @font-color;
+
+     @media (max-width: 1440px) {
+                                  font-size: 1em;
+                                }
+
+     @media (max-width: 1200px) {
+                                  display: none;
+                                }
   }
 
   /* Tabs icons */
@@ -77,31 +85,55 @@
     .prep-icon {
        font-size: 4.5em;         
        color: #BE74AE;
+
+       @media (max-width: 1440px) {
+                                    font-size: 3.5em;
+                                  }
     }
 
     .run-icon {
        font-size: 4.5em;         
        color: #FFB441;
+
+       @media (max-width: 1440px) {
+                                    font-size: 3.5em;
+                                  }
     }
 
     .analysis-icon {
        font-size: 4.5em;         
        color: #7CA8D4;
+
+       @media (max-width: 1440px) {
+                                    font-size: 3.5em;
+                                  }
     }
 
     .data-icon {
        font-size: 4.5em;         
        color: #BAC147;
+
+       @media (max-width: 1440px) {
+                                    font-size: 3.5em;
+                                  }
     }
 
     .public-icon {
        font-size: 4.5em;         
        color: #FFB441;
+
+       @media (max-width: 1440px) {
+                                    font-size: 3.5em;
+                                  }
     }
 
     .apps-icon {
        font-size: 4.5em;         
        color: #BE74AE;
+
+       @media (max-width: 1440px) {
+                                    font-size: 3.5em;
+                                  }
     }
 
   /* tabs hover effects */
@@ -201,7 +233,7 @@
   font-weight: 100;
   font-size: 30px;
   font-family: @font-header;
-  color: #ffb441;
+  color: @earth-pumpkin-color;
   letter-spacing: 1px;
   margin-bottom: 40px;
 }
@@ -338,6 +370,10 @@
         text-shadow: none;
         padding-top: 20px;
         border-top: 1px solid #E4E4E4;
+
+         @media (max-width: 491px){
+                                      margin-left: -15%;
+                                  }
       }
    
       .carousel-indicators{
@@ -349,6 +385,10 @@
         width: 100%;
         padding-right: 5px;
         margin-top: -5px;
+
+        @media (max-width: 768px) {
+                              margin-top: -15px;
+                            }
       }
 
       .carousel-indicators li{
@@ -409,7 +449,7 @@
 .gradient-divider {
   height: 50px;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 100px;
 
   background-color:rgba(199, 199, 199, 0.2);
   background-image: -moz-radial-gradient(50% 100%, ellipse farthest-corner, rgba(199, 199, 199, 0.4), #ffffff 76%);

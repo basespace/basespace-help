@@ -10,6 +10,10 @@
   font: 200 28px/1.2em @font-header, sans-serif;
   color: @article-color;
   letter-spacing: 1px;
+
+  @media (max-width: 491px) {
+    margin-top: 50px;
+  }
 }
 
 .article-content {
@@ -23,6 +27,18 @@
     font-size: 14px;
 }
 
+.article-content > h2 {
+    text-transform: uppercase;
+}
+
+/*.article-content > h3 {
+    padding-top: 20px;
+}
+
+.article-content > h4 {
+    padding-top: 30px;
+}*/
+
 .article-sidebar {
     margin-left: 30px; 
     margin-top: 45px;
@@ -34,6 +50,10 @@
     padding-left: 40px;
 }
 
+hr {
+    border-color: #999;
+    background-color: #999;
+}
 
 /* SIDE NAV STYLES BEGIN */
 
@@ -113,11 +133,6 @@
     #sidenav {
         display:none
     }
-}
-
-h2, h3 {
-    margin-top: -110px;
-    padding-top: 110px;
 }
 
 
