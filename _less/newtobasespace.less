@@ -10,7 +10,7 @@
   font: 100 5em @font-header, sans-serif;
   color: #BE74AE;
   letter-spacing: 1px;
-  margin-top: 0px;
+  margin-top: 150px;
 }
 
 .newb-content {
@@ -70,6 +70,10 @@
      font: 100 1.2em @font-text;
      padding-top: 12%;
      color: @font-color;
+
+     @media (max-width: 1200px) {
+                              display: none;
+                            }
   }
 
   /* Tabs icons */
@@ -201,7 +205,7 @@
   font-weight: 100;
   font-size: 30px;
   font-family: @font-header;
-  color: #ffb441;
+  color: @earth-pumpkin-color;
   letter-spacing: 1px;
   margin-bottom: 40px;
 }
@@ -338,6 +342,10 @@
         text-shadow: none;
         padding-top: 20px;
         border-top: 1px solid #E4E4E4;
+
+         @media (max-width: 491px){
+                                      margin-left: -15%;
+                                  }
       }
    
       .carousel-indicators{
@@ -349,6 +357,10 @@
         width: 100%;
         padding-right: 5px;
         margin-top: -5px;
+
+        @media (max-width: 768px) {
+                              margin-top: -15px;
+                            }
       }
 
       .carousel-indicators li{

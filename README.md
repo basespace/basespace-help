@@ -113,4 +113,4 @@ Though all articles are written in 'markdown(.md)' format, the following are som
           This is description
         {% endcallout %}
 
-
+5. While writing the articles of descriptive type (without using any custom liquid tags for steps), make sure that each section starting with an h3 MUST have a horizontal rule marking the separation between the sections. [Line can be drawn using three or more '---'].

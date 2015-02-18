@@ -16,39 +16,40 @@ color: #666666;
 
 /* %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%
 
-
                                                     Homepage banner
 
    &%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
 
+.banner-container {
+ margin-bottom: 60px;   
+}
 
 .banner-custom{
     
 text-align: left;
-height: 160px;
-
+height: 250px;
+width: 100%;
+background-image: url(/images/illumina-purple-banner.jpg);
+    
+     @media (max-width: 491px) {
+        height: 150px;
+     }
 }
 
 .banner-title{
     
-font-family: "HelveticaNeueW01-ThinEx 710288", sans-serif !important;
-color: #666666; 
-font-size: 42px;
+font-family: @font-header, sans-serif !important;
+color: #fff; 
+font-size: 52px;
 font-weight: 100;
-margin-top: 50px;
+margin-top: 95px;
 position: relative;
 left: 40px;
     
-}
-
-.hr-custom{
-    
-margin: 0px 0px 90px 0px;
-display: block;
-border: 0;
-border-top: 1px solid #dfdfdf;
-border-bottom: 1px solid #fff;
- 
+     @media (max-width: 491px) {
+        font-size: 30px;
+        margin-top: 50px;
+     }
     
 }
 
@@ -70,8 +71,8 @@ border-bottom: 1px solid #fff;
 
 .popular-articles-header {
  
-    font: 200 20px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
-    color: #ffb441;
+    font: 200 24px/1.2em @font-header,sans-serif;
+    color: @earth-pumpkin-color;
     margin-bottom: 20px;
     position: relative;
     left: 40px;
@@ -97,16 +98,17 @@ border-bottom: 1px solid #fff;
                              }
 
      @media (max-width: 491px){
-                                margin-left: 20px;
-                                margin-right: 20px;
-                                padding-left: 20px;
-                                padding-right: 20px;
+                                margin-left: 0px;
+                                margin-right: 0px;
+                                padding-left: 10px;
+                                padding-right: 10px;
+                                left: 20px;
                              }
 
 }
 
 .popular-article-link{
-    font:200 14px/1.2em "helvetica","Arial",sans-serif;
+    font:200 14px/1.2em @font-alt, @font-text,sans-serif;
     line-height: 35px;
     margin-bottom: 30px;
 }
@@ -135,47 +137,80 @@ a.link_grey:hover {
     text-decoration: none;
 }
 
+/* Main box for each category section */
 
-/* Box Layout */
+.category-main {
+    border: 1px solid;
+    border-color: #bbbbbb;
+    border-radius: 3px;
+    background-color: #ffffff;
+    display: block;
+    width: 105%;
+    height: 110px;
+    
+    padding: 10px;
+    margin-bottom: 25px;
+    position: relative;
+    left: 35px;
+    display:flex; 
+    align-items: center;
+
+    
+    @media (max-width: 768px){
+                                width: 80%;
+                                left: 50px;
+                                height: 90px;
+                             }
+    
+    @media (max-width: 460px){
+                                width: 80%;
+                                left: 30px;
+                                height: 90px;
+                             }
+}
+
 
 .left-part{        /*icon layout*/
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+    display: block;
+    float: left;
+    padding-right: 5px;
 }
 
 .middle-part{           /*text layout*/
 
     vertical-align: middle;
     align: left;
-    display: table-cell;
+    display: block;
+    float: left;
+    padding-left: 5px;
+    width: 70%;
 
     .category-heading{
 
-        font: 800 20px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+        font: 800 20px/1.2em @font-header,sans-serif;
         color: #666666;
         letter-spacing: 1px;
         line-height: 1.5;
       
             @media (max-width: 1199px){
-                                        font: 200 16px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+                                        font-size: 16px/1.2em;
                                         
                                      }
 
 
             @media (max-width: 991px){
-                                        font: 200 14px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+                                        font-size: 14px/1.2em;
                                         
                                      }
 
             @media (max-width: 768px){
-                                        font: 200 14px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+                                        font-size: 14px/1.2em;
                                        
                                      }
 
             @media (max-width: 491px){
 
-                                        font: 200 14px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
+                                        font-size: 12px/1.2em;
                                         
                                      }
 
@@ -183,28 +218,27 @@ a.link_grey:hover {
 
     .description-part{
 
-        font: 200 11px/1.2em "pt-sans-regular",sans-serif;
+        font: 200 11px/1.2em @font-alt, @font-text,sans-serif;
         color: #bbbbbb;
         
         
             @media (max-width: 1199px){
-                                        font: 200 11px/1.2em "pt-sans-regular",sans-serif;
+                                        font-size: 11px/1.2em;
                                         
                                       }
 
             @media (max-width: 991px){
-                                        font: 200 11px/1.2em "pt-sans-regular",sans-serif;
-                                       
-                                        
+                                       font-size: 11px/1.2em;
+                                                                              
                                      }
 
             @media (max-width: 768px){
-                                        font: 200 11px/1.2em "pt-sans-regular",sans-serif;
+                                        font-size: 9px/1em;
                                       
                                      }
 
             @media (max-width: 491px){
-                                        font: 200 11px/1.2em "pt-sans-regular",sans-serif;
+                                        font-size: 11px/1.2em;
                                         display: none;
                                      }
 
@@ -214,12 +248,20 @@ a.link_grey:hover {
 
 .right-part{            /*caret layout*/
 
-    display: table-cell;
-    color: #f1f2f2;
-    font-size: 3rem;
-    padding-top: 5px;
-}
+    display: block;
+    color: #bbb;
+    font-size: 6rem;
+    float: right;
+    width: 15%;
 
+    @media (max-width: 991px) {
+                                    font-size: 4rem;
+                              }
+
+    @media (max-width: 491px) {
+                                    display: none;
+                              }
+}
 
 
 /* %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%
@@ -227,38 +269,6 @@ a.link_grey:hover {
                                             New to BaseSpace Section
 
    &%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
-
-/* Box for New to Basespace section */
-
-#sidebarmodule-newb{
-    
-    border: 1px solid;
-    border-color: #bbbbbb;
-    border-radius: 3px;
-    background-color: #ffffff;
-    display: table;
-    width: 105%;
-    height: 110px;
-    
-    padding: 10px;
-    margin-bottom: 25px;
-    position: relative;
-    left: 35px;
-    
-    
-     @media (max-width: 768px){
-                                width: 80%;
-                                left: 50px;
-                                height: 90px;
-                             }
-    
-    @media (max-width: 460px){
-                                width: 80%;
-                                left: 40px;
-                                height: 90px;
-                             }
-   
-}
 
 
 /* New to Basespace Hover CSS */
@@ -305,7 +315,6 @@ a.link_grey:hover {
     
     font-size: 45px;         
     color: #328ED1;
-    display: table-cell;
     position: relative;
     padding-right: 10px;
     padding-left: 10px;
@@ -322,12 +331,13 @@ a.link_grey:hover {
 
     @media (max-width: 768px){
                                 top: -2px;
-                                font-size: 35px;
+                                font-size: 25px;
+                                padding-left: 0px;
                              }
     
     @media (max-width: 491px){
                                 top: -1px;
-                                font-size: 35px;
+                                font-size: 25px;
                              }
     
     
@@ -339,39 +349,6 @@ a.link_grey:hover {
                                             Article Section
 
    &%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
-
-/* Box for Article section */
-
-#sidebarmodule-articles{
-    
-    border: 1px solid;
-    border-color: #bbbbbb;
-    border-radius: 3px;
-    background-color: #ffffff;
-    display: table;
-    width: 105%;
-    height: 110px;
-    
-    padding: 10px;
-    margin-bottom: 25px;
-    position: relative;
-    left: 35px;
-    
-    
-     @media (max-width: 768px){
-                                width: 80%;
-                                left: 50px;
-                                height: 90px;
-                             }
-    
-    @media (max-width: 460px){
-                                width: 80%;
-                                left: 40px;
-                                height: 90px;
-                             }
-   
-}
-
 
 /* Articles Hover CSS */
 
@@ -415,7 +392,6 @@ a.link_grey:hover {
     
     font-size: 45px;         
     color: #ffb441;
-    display: table-cell;
     position: relative;
     padding-right: 10px;
     padding-left: 10px;
@@ -431,12 +407,13 @@ a.link_grey:hover {
 
     @media (max-width: 768px){
                                 top: -2px;
-                                font-size: 35px;
+                                font-size: 25px;
+                                padding-left: 0px;
                              }
     
     @media (max-width: 491px){
                                 top: -1px;
-                                font-size: 35px;
+                                font-size: 25px;
                              }
     
     
@@ -448,39 +425,6 @@ a.link_grey:hover {
                                            Dev Section CSS
 
    &%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
-
-
-
-#sidebarmodule-dev{
-    
-    border: 1px solid;
-    border-color: #bbbbbb;
-    border-radius: 3px;
-    background-color: #ffffff;
-    display: table;
-    width: 105%;
-    height: 110px;
-    
-    padding: 10px;
-    margin-bottom: 25px;
-    position: relative;
-    left: 35px;
-    
-    
-     @media (max-width: 768px){
-                                width: 80%;
-                                left: 50px;
-                                height: 90px;
-                             }
-    
-    @media (max-width: 460px){
-                                width: 80%;
-                                left: 40px;
-                                height: 90px;
-                             }
-    
-}
-
 
 #sidebarmodule-dev:hover{
     
@@ -523,7 +467,6 @@ a.link_grey:hover {
 
     font-size: 45px;
     color: #BAC147;
-    display: table-cell;
     position: relative;
     padding-right: 10px;
     padding-left: 10px;
@@ -539,37 +482,13 @@ a.link_grey:hover {
 
     @media (max-width: 768px){
                                 top: -2px;
-                                font-size: 35px;
+                                font-size: 25px;
+                                padding-left: 0px;
                              }
 
     @media (max-width: 491px){
                                 top: -1px;
-                                font-size: 35px;
-                             }
-
-}
-
-/* %&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%
-
-                                            ICONS
-
-   &%&%&%&%&%&%&%&%&%&%&%&%&%&%&%%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&%&% */
-
-/* Right Caret Icon */
-
-.caret-right{
-
-    font-size: 60px;
-    color: #bbbbbb;
-    position: relative;
-    top: 7px;
-    left: 10px;
-    display: table-cell;
-
-    @media (max-width: 768px){
-                                top: -3px;
-                                font-size: 60px;
-
+                                font-size: 25px;
                              }
 
 }
@@ -585,16 +504,20 @@ a.link_grey:hover {
 .video-section{
     border-top: 1px solid #e7e5e5;
     background-color: #f6f6f6;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .video-heading{
-    font: 200 28px/1.2em "HelveticaNeueW01-ThinEx 710288",sans-serif;
-    color: #ffb441;
+    font: 200 28px/1.2em @font-header,sans-serif;
+    color: @earth-pumpkin-color;
     text-align: left;
     letter-spacing: 1px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 30px;
+}
+
+.video-desc {
+    font-size: 14px;
 }
 
 .video-container {
