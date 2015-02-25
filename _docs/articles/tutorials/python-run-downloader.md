@@ -8,8 +8,9 @@ This tutorial will take you through the steps on how to download data from BaseS
 
 There are a few sections for this tutorial:
 
-- Obtaining an Access Token for your account
-- Download Runs from BaseSpace
+- [Obtaining an Access Token for your account](#Obtaining_an_Access_Token_for_your_account)
+- [Download Runs from BaseSpace](#Download_Runs_from_BaseSpace)
+- [Further Documentation](#Further_Documentation)
 
 <!--
 - Download Projects from BaseSpace
@@ -23,19 +24,19 @@ Before you can begin interacting with BaseSpace programmatically, you will need 
 
 {% step 1, null, Login to Developer Portal %} Go to [https://developer.basespace.illumina.com/](https://developer.basespace.illumina.com/) and login with your BaseSpace credentials {% endstep %}
 
-{% step 2, null, My Apps %}
+{% step 2, /images/python-downloader/MyAppsLink.png, My Apps %}
 Click on the **My Apps** link in the tool bar
 {% endstep %}
 
-{% step 3, null, Create a New App (or Select an Existing App) %}
+{% step 3, /images/python-downloader/CreateButton.png, Create a New App (or Select an Existing App) %}
 In the applications tab, click on the **Create New Application** button (or select an existing application if you have already created one)
 {% endstep %}
 
-{% step 4, null, Enter Application Details %}
+{% step 4, /images/python-downloader/Form.png, Enter Application Details %}
 If you are creating a new application, fill out the Application Details and then click the **Create Application** button.  If you have already created an application, please skip this step.
 {% endstep %}
 
-{% step 5, null, Get Access Token %}
+{% step 5, /images/python-downloader/CredentialsTab.png, Get Access Token %}
 In the **Credentials** tab for the app, you will find an **Access Token** which you will need in order to run the Python script.  
 {% endstep %}
 
