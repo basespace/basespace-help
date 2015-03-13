@@ -19,13 +19,16 @@
 			
 			<div class="col-md-10 col-lg-10">
 				<ol class="breadcrumb bsh-breadcrumb">
-		        	<li>
-		        	{% if (page.is_article == true) %}
-						<a href="{{ site.baseurl }}/articles/">Articles</a>
-					{% else %}
-						<a href="{{ site.baseurl }}/">Help Center</a>
-					{% endif %}
-					</li>
+				    <li>
+				        {% case page.layout %}
+				        {% when "release-notes" %}
+                        <a href="{{ site.baseurl }}/release-notes/">Release Notes</a>
+				        {% when "article" %}
+				        <a href="{{ site.baseurl }}/articles/">Articles</a>
+                        {% else %}
+				        <a href="{{ site.baseurl }}/">Help Center</a>
+				        {% endcase %}
+				    </li>
 					<li class="active">{{ page.title }}</li>
 	      		</ol>
  			</div>
