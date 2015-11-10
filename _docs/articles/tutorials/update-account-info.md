@@ -1,6 +1,6 @@
 ---
 layout: article
-title: How to switch existing account to a new username/email
+title: How to update account info
 hide_welcome_banner: true
 ---
 <br />
