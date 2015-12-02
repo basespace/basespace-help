@@ -36,7 +36,7 @@ This script work on both Ubuntu and CentOS. The script will add BaseSpace packag
 
 
 ##Minimum Hardware Requirements and System-Level Settings
-We have tested the BaseMount *Alpha* v0.1.2 release on the following systems:
+We have tested the BaseMount *Alpha* v0.11.0 release on the following systems:
 
 Supported Operating Systems:
 
@@ -127,7 +127,7 @@ You can use BaseMount to download your BaseSpace data to a local filesystem. Jus
 
 Although BaseMount does facilitate file download, we would recommend that since BaseMount allows convenient, fast, cached access to your BaseSpace metadata and files, you may find that many operations can be carried out without the need to download locally. During our testing, we have used BaseMount to grep through fastq files, extract blocks of reads from bam files and even use IGV on the bam files directly all without downloading files locally. This can be more convenient than including a download step and saves on the overheads of local storage.
 
-##Limitations of BaseMount *Alpha* v0.1.2
+##Limitations of BaseMount *Alpha* v0.11.0
 Every new directory access made by BaseMount relies on FUSE, the BaseSpace API and the user's credentials. This mechanism means that, as currently available, BaseMount does not support the following types of access:
 
 
