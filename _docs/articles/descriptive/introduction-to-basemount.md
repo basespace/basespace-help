@@ -24,15 +24,17 @@ This script work on both Ubuntu and CentOS. The script will add BaseSpace packag
 
 ###Manual install:
 ####Ubuntu:
-    wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-DEB/bsfs_1.1.631-1_amd64.deb
-    wget https://bintray.com/artifact/download/basespace/BaseMount-DEB/basemount_0.1.2.463-20150714_amd64.deb
-    sudo dpkg -i --force-confmiss bsfs_1.1.631-1_amd64.deb
-    sudo dpkg -i basemount_0.1.2.463-20150714_amd64.deb
+    wget https://bintray.com/artifact/download/basespace/BaseMount-DEB/basemount_0.11.0.992-20151203_amd64.deb
+    wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-DEB/bsfs_1.2.746-1_amd64.deb
+    sudo dpkg -i basemount_0.11.0.992-20151203_amd64.deb
+    sudo dpkg -i --force-confmiss bsfs_1.2.746-1_amd64.deb
+
 ####CentOS
-    wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-RPM/bsfs-1.1.632-1.x86_64.rpm
-    wget https://bintray.com/artifact/download/basespace/BaseMount-RPM/basemount-0.1.2.464-20150714.x86_64.rpm
-    sudo yum install bsfs-1.1.632-1.x86_64.rpm
-    sudo yum install basemount-0.1.2.464-20150714.x86_64.rpm
+    wget https://bintray.com/artifact/download/basespace/BaseMount-RPM/basemount-0.11.0.993-20151203.x86_64.rpm
+    wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-RPM/bsfs-1.2.747-1.x86_64.rpm
+    sudo yum install basemount-0.11.0.993-20151203.x86_64.rpm
+    sudo yum install bsfs-1.2.747-1.x86_64.rpm
+
 
 
 ##Minimum Hardware Requirements and System-Level Settings
@@ -137,6 +139,7 @@ Every new directory access made by BaseMount relies on FUSE, the BaseSpace API a
 - BaseMount also doesn't refresh files or directories. In order to reflect changes done via the Web GUI in your command line tree, you currently need to unmount (basemount --unmount <mountpoint>) and restart BaseMount.
 - The Runs Files directory is not mounted automatically for you as there can be 100k + files available in that mount which can take a couple minutes to load for really large runs.  You can still mount this directory manually if needed.
 - In general, lots of concurrent requests can cause stability issues on a resource constrained system.  Keep in mind, this is an early release and stability will increase.
+- If you have terabytes of data in BaseSpace, doing a "find" command or recursive "ls" or recursive "grep" on the mount is not recommended.
 
 ## Feedback
 
