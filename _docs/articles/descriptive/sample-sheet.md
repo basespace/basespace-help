@@ -27,7 +27,7 @@ The sample sheet is a comma-delimited file (SampleSheet.csv) that stores the inf
 ##When to use it
 Every run in BaseSpacerequires an associated sample sheet to define projects and samples, assign indexes, and run sample sheet driven workflow apps.
 
-##When not ot use it
+##When not to use it
 Not applicable; you always employ a sample sheet with BaseSpace.
 
 ##How to use it
