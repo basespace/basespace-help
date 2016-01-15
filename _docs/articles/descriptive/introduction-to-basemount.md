@@ -23,6 +23,7 @@ Run the following command:
 This script work on both Ubuntu and CentOS. The script will add BaseSpace package repositories and import public key to your system and install [BaseMount](https://basemount.basespace.illumina.com "BaseMount") and its prerequisites.
 
 ###Manual install:
+The above install script always installs the latest version of BaseMount. If you want to be locked into the current released version as part of your system setup scripts please use the following steps in your own install script.
 ####Ubuntu:
     wget https://bintray.com/artifact/download/basespace/BaseMount-DEB/basemount_0.11.0.992-20151203_amd64.deb
     wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-DEB/bsfs_1.2.746-1_amd64.deb
@@ -128,7 +129,25 @@ This file access is provided by BSFS, the mechanism used by the BaseSpace native
 You can use BaseMount to download your BaseSpace data to a local filesystem. Just use **cp**, **rsync** or any command line tool you prefer to copy the files from your BaseMount space to your chosen destination. 
 
 Although BaseMount does facilitate file download, we would recommend that since BaseMount allows convenient, fast, cached access to your BaseSpace metadata and files, you may find that many operations can be carried out without the need to download locally. During our testing, we have used BaseMount to grep through fastq files, extract blocks of reads from bam files and even use IGV on the bam files directly all without downloading files locally. This can be more convenient than including a download step and saves on the overheads of local storage.
-
+## BaseSpaceFS (BSFS) plugin
+The bsfs plugin is a high performance fuse based plugin for basemount. This plugin can be activated as follows:
+	basemount -plugin=bsfs <mountpoint>
+The bsfs plugin is targeted at EC2 instances and cases when you want to run apps on the mounted basespace data. The main advantage of bsfs plugin is that all the data downloaded are kept in a disk based LRU buffer. Native apps currently running on BaseSpace uses bsfs with a disk-buffer size of 100GB. Without the bsfs plugin, if same parts of the file are acessed repeatedly then the data might have to be refetched from BaseSpace.
+### Differences in behavior with use of BSFS plugin
+*  A new mount point pointing to /temp/BsfsMount/<mount point> will appear in the mount entry.
+* The "Files" directory containing your actual files are a symlink to a folder in /temp. So, if you want to tar the files, you will have to use "h" option to follow the symlinks.
+* bsfs plugin does not support proxies
+### Bsfs options
+There are three caching methods as described below:
+#### RamBuffer mode
+In this mode, the cache data is kept in RAM, and not on disk. Because of this the buffer limit and block size has to be conservative because of the limited installed RAM.
+#### SparseFile mode
+This mode is used in EC2 instances, where the cache path is on XFS file system. If this mode is specified and the cache path is not on XFS, then BlockFile mode will be used automatically.
+#### BlockFile mode
+This mode can be used with any file system.
+### Example configuration of bsfs plugin
+To properly use bsfs plugin, the following values have to be set in the configuration file under [BaseSpaceFS] tag as:
+<insert example here>
 ##Limitations of BaseMount *Alpha* v0.11.0
 Every new directory access made by BaseMount relies on FUSE, the BaseSpace API and the user's credentials. This mechanism means that, as currently available, BaseMount does not support the following types of access:
 
@@ -185,6 +204,36 @@ Please visit our [BaseSpace google group](https://groups.google.com/forum/#!foru
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xknDqArvRf8" frameborder="0" allowfullscreen></iframe>
 
 {% endstep %}
+
+##ChangeLog
+v0.11.0 Alpha -1/18/16
+* Proxy support
+* BaseSpace CLI support
+* The "Files" directories are not symlinks anymore
+* BSFS plugin
+
+v0.1.0 Alpha -7/24/15
+* Initial release
+
+
 						
-						
+## Installing previous version of Basemount
+Please uninstall all existing versions of basemount and bsfs first.
+
+###v0.1 Alpha:
+
+####Ubuntu:
+
+	wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-DEB/bsfs_1.1.631-1_amd64.deb
+	wget https://bintray.com/artifact/download/basespace/BaseMount-DEB/basemount_0.1.2.463-20150714_amd64.deb
+	sudo dpkg -i --force-confmiss bsfs_1.1.631-1_amd64.deb
+	sudo dpkg -i basemount_0.1.2.463-20150714_amd64.deb
+####CentOS
+
+	wget https://bintray.com/artifact/download/basespace/BaseSpaceFS-RPM/bsfs-1.1.632-1.x86_64.rpm
+	wget https://bintray.com/artifact/download/basespace/BaseMount-RPM/basemount-0.1.2.464-20150714.x86_64.rpm
+		sudo yum install bsfs-1.1.632-1.x86_64.rpm
+sudo yum install basemount-0.1.2.464-20150714.x86_64.rpm
+			
+
 			
