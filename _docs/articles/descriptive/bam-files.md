@@ -13,7 +13,7 @@ Allows you to see alignments. Use it for direct interpretation or as a starting 
 Do not use it with tools that are not compatible with the BAM format. Do not use with applications that cannot handle large files, as BAM files can get large, depending on the application and data.
 
 ##How to use it
-If you use an app in BaseSpace that uses BAM files as input, the app locates the file when launched. If using BAM files in other tools, download the file to use it in the external tool.
+If you use an app in BaseSpace Hub that uses BAM files as input, the app locates the file when launched. If using BAM files in other tools, download the file to use it in the external tool.
 
 ##Detailed Description
 Go to [this link](http://samtools.github.io/hts-specs/SAMv1.pdf) to see the exact SAM specification.

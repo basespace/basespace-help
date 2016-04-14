@@ -50,7 +50,7 @@ Further information is provided regarding the frequency of individual indexes in
 <table class="table table-bordered">
 	<tr>
 		<td>Index Number</td>
-		<td>A unique number assigned to each index by BaseSpace for display purposes</td>
+		<td>A unique number assigned to each index by BaseSpace Hub for display purposes</td>
 	</tr>
 	<tr>
 		<td>Sample ID</td>
@@ -74,4 +74,4 @@ Further information is provided regarding the frequency of individual indexes in
 	</tr>
 </table>
 
-This information is also displayed in graphical form. In the graphical display, indexes are ordered according to the unique Index Number assigned by BaseSpace.
+This information is also displayed in graphical form. In the graphical display, indexes are ordered according to the unique Index Number assigned by BaseSpace Hub.

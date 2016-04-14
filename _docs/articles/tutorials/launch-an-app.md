@@ -4,7 +4,7 @@ title: How to launch an app
 hide_welcome_banner: true
 ---
 
-Launching an app is one of the most essential and basic features in the BaseSpace platform. An app can be launched in one of the two ways.
+Launching an app is one of the most essential and basic features in the BaseSpace Hub platform. An app can be launched in one of the two ways.
 <br />
 <br />
 {% step 1, /images/tutorials/launch-app-step1_1318x417.png, Launch App %}

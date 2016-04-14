@@ -6,7 +6,7 @@ title: Description of the Run Summary section for a Sequencing Run
 
 # Run Summary
 
-The Run Summary page can be accessed by first selecting a Run in BaseSpace then clicking on the **Run Summary** button in the left-hand navigation pane.
+The Run Summary page can be accessed by first selecting a Run in BaseSpace Hub then clicking on the **Run Summary** button in the left-hand navigation pane.
 
 {% screenshot /images/articles/runs-summary_767x366.png %}
 

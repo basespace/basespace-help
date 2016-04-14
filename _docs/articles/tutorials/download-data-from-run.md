@@ -4,7 +4,7 @@ title: How to download data from Run
 hide_welcome_banner: true
 ---
 
-BaseSpace allows you to download data either as a package or individually. The packages available depends on your workflow. There are four types of data packages that are available:  variant, aligned, unaligned, and SAV data. All packages that are greyed out does not apply to your particular workflow and will not be available for download.
+BaseSpace Hub allows you to download data either as a package or individually. The packages available depends on your workflow. There are four types of data packages that are available:  variant, aligned, unaligned, and SAV data. All packages that are greyed out does not apply to your particular workflow and will not be available for download.
 <br />
 <br />
 {% step 1, /images/tutorials/runs-tab_1365x402.png, Choose Run %}

@@ -25,10 +25,10 @@ The sample sheet is a comma-delimited file (SampleSheet.csv) that stores the inf
 	A1_NA12891_AFP1,NA12891_AFP1,A,/genomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta,/data/scratch/workspace/10634638_S1_1,1,1
 
 ##When to use it
-Every run in BaseSpacerequires an associated sample sheet to define projects and samples, assign indexes, and run sample sheet driven workflow apps.
+Every run in BaseSpace Hub requires an associated sample sheet to define projects and samples, assign indexes, and run sample sheet driven workflow apps.
 
 ##When not to use it
-Not applicable; you always employ a sample sheet with BaseSpace.
+Not applicable; you always employ a sample sheet with BaseSpace Hub.
 
 ##How to use it
 The following table is for reference purposes only. For details about creating or modifying a sample sheet, see the MiSeq Reporter User Guide, MiSeq Sample Sheet Quick Reference Guide, or HiSeq User Guide. You can create a sample sheet using the Illumina Experiment Manager Software.

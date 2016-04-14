@@ -1,10 +1,10 @@
 ---
 layout: article
-title: BaseSpace UI Overview
+title: BaseSpace Hub UI Overview
 hide_welcome_banner: true
 ---
 
-The BaseSpace User Interface (UI) has a number of common UI elements that are shared between all BaseSpace pages, and which enable general tasks. Mainly the UI can be divided into:
+The BaseSpace Hub User Interface (UI) has a number of common UI elements that are shared between all BaseSpace Hub pages, and which enable general tasks. Mainly the UI can be divided into:
 
 * Toolbar Elements
 * Contact Us Button
@@ -13,12 +13,12 @@ The BaseSpace User Interface (UI) has a number of common UI elements that are sh
 
 -----------------------
 ##Header elements
-The following documentation describes the actions available in the header within BaseSpace.
+The following documentation describes the actions available in the header within BaseSpace Hub.
 
 
 ###Dashboard tab
 {% screenshot /images/articles/dashboard-tab_200x132.png %}  
-After login, the first tab users see is the dashboard. The dashboard provides access to notifications, iCredits, and your latest runs, projects, and app results. The dashboard is always accessible in BaseSpace from the button in the header.
+After login, the first tab users see is the dashboard. The dashboard provides access to notifications, iCredits, and your latest runs, projects, and app results. The dashboard is always accessible in BaseSpace Hub from the button in the header.
 
 ####Notifications
 This section shows notifications, with the most recent listed at the top. There are multiple types of notifications :
@@ -36,24 +36,24 @@ This section shows notifications, with the most recent listed at the top. There 
 
 ####Runs Pane
 
-The bottom left pane of the BaseSpace dashboard shows the three most recent runs, and is updated automatically.
+The bottom left pane of the BaseSpace Hub dashboard shows the three most recent runs, and is updated automatically.
 Clicking the Runs pane opens the Runs tab. Clicking a run opens the Runs tab with the run loaded. 
 
 ####Projects Pane
 
-The bottom middle pane of the BaseSpace dashboard shows the three most recent projects. The folder icon indicates the sharing status of the project: if it shows several people , the project is shared. Clicking the Projects pane opens the Projects tab. Clicking a project opens the Projects tab with the project loaded. 
+The bottom middle pane of the BaseSpace Hub dashboard shows the three most recent projects. The folder icon indicates the sharing status of the project: if it shows several people , the project is shared. Clicking the Projects pane opens the Projects tab. Clicking a project opens the Projects tab with the project loaded. 
 
 ####App Results Pane
 
-The right bottom pane of the BaseSpace dashboard shows the most recent app results. Clicking an app result provides charts relevant for the app used in the Projects tab. For more information, see App Results Page.
+The right bottom pane of the BaseSpace Hub dashboard shows the most recent app results. Clicking an app result provides charts relevant for the app used in the Projects tab. For more information, see App Results Page.
 
 ####iCredits
-All in-app purchases are performed using an Illumina currency called iCredits. Before a user can make any in-app purchases, they must add iCredits to their account by purchasing them through BaseSpace. 1 iCredit can be purchased at a rate of 1 USD. 
+All in-app purchases are performed using an Illumina currency called iCredits. Before a user can make any in-app purchases, they must add iCredits to their account by purchasing them through BaseSpace Hub. 1 iCredit can be purchased at a rate of 1 USD. 
 
 -----------------------
 ###Prep tab
 {% screenshot /images/articles/prep-tab_121x128.png %}
-The Prep tab enables you to set up a sequencing run on the NextSeq sequencing system. This tab is only available for NextSeq sequencing systems at the moment. Other Illumina sequencing instruments use a sample sheet to provide sample information to BaseSpace. 
+The Prep tab enables you to set up a sequencing run on the NextSeq sequencing system. This tab is only available for NextSeq sequencing systems at the moment. Other Illumina sequencing instruments use a sample sheet to provide sample information to BaseSpace Hub. 
 
 -----------------------
 ###Runs tab
@@ -68,7 +68,7 @@ The Projects button opens a list of your projects. You can sort the list by name
 -----------------------
 ###Apps tab
 {% screenshot /images/articles/apps-tab_127x132.png %}
-The Apps button leads to the Apps page, which provides an overview of the BaseSpace applications that you can run.
+The Apps button leads to the Apps page, which provides an overview of the BaseSpace Hub applications that you can run.
 
 -----------------------
 ###Public Data tab
@@ -95,15 +95,15 @@ The Account drop-down list provides access to:
 
 -----------------------
 ##Contact Us button
-BaseSpace users can access Help, contact support or provide feedback almost instantly in the matter of few clicks. See [Contact Us](/articles/descriptive/help-and-support).
+BaseSpace Hub users can access Help, contact support or provide feedback almost instantly in the matter of few clicks. See [Contact Us](/articles/descriptive/help-and-support).
 
 -----------------------
 ##Footer Links
 
 The bottom links provide access to more information:
 
-- Help: redirects users to the online help website for BaseSpace
+- Help: redirects users to the online help website for BaseSpace Hub
 - FAQ: leads to a number of frequently asked questions and Illumina-provided answers.
-- Developers: leads to the developers portal where you can learn more about creating apps in BaseSpace
-- Terms: leads to the BaseSpace User Agreement
-- Blog: leads to the [BaseSpace blog](http://blog.basespace.illumina.com). Check out the BaseSpace blog for the latest news, updates, and developments, and to subscribe to updates.
+- Developers: leads to the developers portal where you can learn more about creating apps in BaseSpac Hub
+- Terms: leads to the BaseSpace Hub User Agreement
+- Blog: leads to the [BaseSpace Hub blog](http://blog.basespace.illumina.com). Check out the BaseSpace Hub log for the latest news, updates, and developments, and to subscribe to updates.

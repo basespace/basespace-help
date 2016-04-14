@@ -28,9 +28,9 @@ title: Introduction To BaseMount
 
 ## Overview
 
-The main mechanism to interact with your BaseSpace data is via the website at [basespace.illumina.com](https://basespace.illumina.com). However, for some use-cases, it can be useful to work with the same data using the Linux command line interface (CLI). This allows direct ad-hoc programmatic access so that users can write ad-hoc scripts and use tools like find, xargs and command line loops to work with their data in bulk.
+The main mechanism to interact with your BaseSpace Hub data is via the website at [basespace.illumina.com](https://basespace.illumina.com). However, for some use-cases, it can be useful to work with the same data using the Linux command line interface (CLI). This allows direct ad-hoc programmatic access so that users can write ad-hoc scripts and use tools like find, xargs and command line loops to work with their data in bulk.
 
-This is the concept behind our BaseSpace command line tool, [BaseMount](https://basemount.basespace.illumina.com "BaseMount"), a [FUSE driver](https://en.wikipedia.org/wiki/Filesystem_in_Userspace "FUSE userspace driver") that allows command line access to your [BaseSpace](https://basespace.illumina.com "BaseSpace") data.
+This is the concept behind our BaseSpace Hub command line tool, [BaseMount](https://basemount.basespace.illumina.com "BaseMount"), a [FUSE driver](https://en.wikipedia.org/wiki/Filesystem_in_Userspace "FUSE userspace driver") that allows command line access to your [BaseSpace Hub](https://basespace.illumina.com "BaseSpace") data.
 
 
 
@@ -38,7 +38,7 @@ This is the concept behind our BaseSpace command line tool, [BaseMount](https://
 
 ## What is BaseMount?
 
-[BaseMount](https://basemount.basespace.illumina.com "BaseMount") is a tool to mount your BaseSpace data as a Linux file system. You can navigate through projects, samples, runs and app results and interact directly with the associated files exactly as you would with any other local file system. BaseMount is based on [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace "FUSE userspace driver") and uses the [BaseSpace API](https://developer.basespace.illumina.com "BaseSpace API") to populate the contents of each directory.
+[BaseMount](https://basemount.basespace.illumina.com "BaseMount") is a tool to mount your BaseSpace Hub data as a Linux file system. You can navigate through projects, samples, runs and app results and interact directly with the associated files exactly as you would with any other local file system. BaseMount is based on [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace "FUSE userspace driver") and uses the [BaseSpace Hub API](https://developer.basespace.illumina.com "BaseSpace API") to populate the contents of each directory.
 
 
 
@@ -224,7 +224,7 @@ Run the following command:
 
     sudo bash -c "$(curl -L https://basemount.basespace.illumina.com/install)"
 
-This script works on both Ubuntu and CentOS. It adds BaseSpace package repositories, import public keys to your system and installs BaseMount and its prerequisites.
+This script works on both Ubuntu and CentOS. It adds BaseSpace Hub package repositories, import public keys to your system and installs BaseMount and its prerequisites.
 
 
 ### Manual install
@@ -309,14 +309,14 @@ Recommended ulimit thresholds:
 
 <a name="Mounting"></a>
 
-## Mounting Your BaseSpace Account
+## Mounting Your BaseSpace Hub Account
 
-After a successful installation, you can mount your BaseSpace account with BaseMount. 
+After a successful installation, you can mount your BaseSpace Hub account with BaseMount. 
 Basic usage is as follows:
 
     basemount [--config <config name>] <mount-point folder>
 
-where the --config parameter is optional, and useful when a user has multiple basespace accounts to be mounted.  
+where the --config parameter is optional, and useful when a user has multiple BaseSpace Hub accounts to be mounted.  
 The config name is used to create a `<config name>.cfg` file in the ~/.basespace/ directory.  
 The mount point directory becomes the top level folder in your mounted file tree.
 
@@ -339,10 +339,10 @@ To run BaseMount inside a docker container, the container must run in privileged
 Note: If you need a more secure alternative to `docker run --privileged`, you may look around `docker run --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfined` (but please don't ask us for any help with this obscure thing).
 
 
-### Mounting a BaseSpace Onsite System
+### Mounting a BaseSpace Hub Onsite System
 
-BaseMount can also be used to mount user account data for BaseSpace Onsite.  
-This is supported starting with BaseSpace Onsite 2.1.  
+BaseMount can also be used to mount user account data for BaseSpace Hub Onsite.  
+This is supported starting with BaseSpace Hub Onsite 2.1.  
 
 In order to mount your account data, you must use an additional command-line parameter `--api-server`.  
 This will direct BaseMount to connect via the API URL of the BaseSpace Onsite system.  
@@ -359,7 +359,7 @@ Once authenticated, BaseMount will remember the API server URL for all subsequen
 
 ## Authentication
 
-The first time you run BaseMount, you will be directed to a web URL and asked to enter your BaseSpace user credentials. BaseMount will use these credentials to authenticate your interactions with BaseSpace. By default, the credentials are cached in your home directory and they can be password-encrypted for security, just like an ssh key.
+The first time you run BaseMount, you will be directed to a web URL and asked to enter your BaseSpace Hub user credentials. BaseMount will use these credentials to authenticate your interactions with BaseSpace Hub. By default, the credentials are cached in your home directory and they can be password-encrypted for security, just like an ssh key.
 
 
 
@@ -386,12 +386,12 @@ You can list the currently mounted directories using `mount | grep basemount`.
 
 ## Directory Structure
 
-BaseMount uses the natural structure of the BaseSpace API to create an appropriate directory hierarchy, summarized below.
+BaseMount uses the natural structure of the BaseSpace Hub API to create an appropriate directory hierarchy, summarized below.
 
 
 ### Overview
 
-BaseMount mimics the structure of the major resources represented in the BaseSpace API.
+BaseMount mimics the structure of the major resources represented in the BaseSpace Hub API.
 The root of this structure starts with the Href link that you would find in the API call *[https://api.basespace.illumina.com/v1pre3/users/current](https://api.basespace.illumina.com/v1pre3/users/current)*.
 
 
@@ -419,7 +419,7 @@ These directories are:
  - {mount-point}/Project/{project-name}/**AppSessions**
  - {mount-point}/Project/{project-name}/**Samples**
 
-Inside these directories, each BaseSpace entity is represented as a sub-directory with the corresponding name.
+Inside these directories, each BaseSpace Hub entity is represented as a sub-directory with the corresponding name.
 
 Entities can also be accessed by ID via the symbolic links `.id.{entity-id} -> {entity-name}`.
 
@@ -444,7 +444,7 @@ Entities of type Project contain project sub-entities:
 
 ![Project Detail](/images/articles/tree-project.png)
 
- - **AppSessions**, aka "Analyses" on the BaseSpace website: list of all appsessions started in or written to this project.
+ - **AppSessions**, aka "Analyses" on the BaseSpace Hub website: list of all appsessions started in or written to this project.
  - **AppResults**: app outputs (with output files) associated with the project. This is a flattened out list, not broken down by analysis.  
  - **Samples**: flattened list of Samples that are in the project and will have a Files directory containing your fastq.gz files.
 
@@ -483,13 +483,13 @@ These directories are described in more details in the "Download" section below.
 
 ### BaseMount metadata files
 
-In each directory, BaseMount provides a number of hidden files with extra BaseSpace metadata. These hidden files follow the Unix convention of starting with a "." and can be seen using the command `ls -a`.
+In each directory, BaseMount provides a number of hidden files with extra BaseSpace Hub metadata. These hidden files follow the Unix convention of starting with a "." and can be seen using the command `ls -a`.
 
 These metadata files are:
 
  - **.href**: the API entry point used to query this directory's contents
  - **.curl**: the API request, which could be used in standalone scripts
- - **.json**: the result of the BaseSpace API query. This includes metadata associated with the relevant BaseSpace entity. For example a sample's metadata includes the number and length of reads, the number of reads passing filter, etc.
+ - **.json**: the result of the BaseSpace Hub API query. This includes metadata associated with the relevant BaseSpace Hub entity. For example a sample's metadata includes the number and length of reads, the number of reads passing filter, etc.
  - **.id**  : the id of the basespace entity, if it exists, extracted from .href
  - **.type**: the entity (or group thereof)'s type, extracted from .href
 
@@ -503,12 +503,12 @@ In appresult and sample directories, `Files` sub-directories expose data files, 
 
 Just use `cp`, `rsync`, or any command line tool to copy the files from your BaseMount space to your chosen destination.
 
-File accesses use direct HTTPS connections to Amazon S3 storage (i.e. they don't go through the BaseSpace API) to expose files at the block level so users can access any part of a file without needing to download all the preceding blocks, such as when using a tabix or bam index. Caching makes repeated accesses to the same file more efficient.
+File accesses use direct HTTPS connections to Amazon S3 storage (i.e. they don't go through the BaseSpace Hub API) to expose files at the block level so users can access any part of a file without needing to download all the preceding blocks, such as when using a tabix or bam index. Caching makes repeated accesses to the same file more efficient.
 
 
 ### Interactive access
 
-Although BaseMount does facilitate file download, and since BaseMount allows for convenient, fast, cached access to your BaseSpace metadata and files, you may find that many operations can be carried out without the need to download entire files locally.
+Although BaseMount does facilitate file download, and since BaseMount allows for convenient, fast, cached access to your BaseSpace Hub metadata and files, you may find that many operations can be carried out without the need to download entire files locally.
 
 During our testing, we have used BaseMount to grep through FASTQ files, extracted blocks of reads from BAM files and even used IGV on BAM files directly, all without downloading files locally. This can be more convenient than including a download step and saves on the overheads of local storage.
 
@@ -557,7 +557,7 @@ Unfortunately, the data downloaded from BaseSpace is not currently validated (fo
 
 A back-end with different caching strategies can be selected when launching BaseMount: the BSFS plugin
 
-BSFS is optimising data accesses for large machines with good connection to S3, such as large EC2 instances. BSFS is the filesystem currently used by BaseSpace when running native apps.
+BSFS is optimising data accesses for large machines with good connection to S3, such as large EC2 instances. BSFS is the filesystem currently used by BaseSpace Hub when running native apps.
 
 Without the BSFS plugin, caching is handled by the Linux disk cache, using (and restricted to) any available RAM.
 With BSFS, downloaded data is kept in a disk-based LRU (Least Recently Used) cache. 
@@ -586,13 +586,13 @@ Note: This S3 URL is only valid for 7 days after it got generated by the API cal
 
 <a name="WriteMode"></a>
 
-## Writing and Uploading data to BaseSpace
+## Writing and Uploading data to BaseSpace Hub
 
 Starting with version 0.12, BaseMount offers write mode capabilities.
 
 This brings in the following 3 major and 2 minor features:
 
-- Creation of new BaseSpace entities: Projects, AppResults
+- Creation of new BaseSpace Hub entities: Projects, AppResults
 - File upload to AppResults
 - Property editing
 - Marking AppSessions as Complete
@@ -607,11 +607,11 @@ If you authenticated with an older version of BaseMount, your stored access toke
 To solve this, you need to delete your current configuration (by using `basemount --remove-config [--config=<config>]`) and run BaseMount again to re-authenticate.
 
 
-### Creation of new BaseSpace entities
+### Creation of new BaseSpace Hub entities
 
 In any Projects or AppResults directory, the `mkdir <name>` command will create a new directory with the specified name.
 
-A matching BaseSpace entity is created on the BaseSpace server.
+A matching BaseSpace Hub entity is created on the BaseSpace Hub server.
 
 - Projects are always created in write mode
 - AppResults are created together with an associated AppSession called "BaseSpaceCLI - {creation time}". This appsession's status is set as "Running". Files can be added as long as the appsession stays in Running mode.
@@ -632,7 +632,7 @@ Note: Uploaded blocks are validated using their MD5 sums.
 
 ### Property editing
 
-A directory called "Properties" can be found under most BaseSpace entity directories.  
+A directory called "Properties" can be found under most BaseSpace Hub entity directories.  
 
 Special rules dictate who can edit those properties:
 
@@ -651,10 +651,10 @@ For example:
     ln -s ../../../Samples/myExistingSample mySampleProperty
     
     # ... or any path
-    ln -s <path to any basespace entity in BaseMount filesystem> myNiceEntity
+    ln -s <path to any BaseSpace Hub entity in BaseMount filesystem> myNiceEntity
 
 
-The BaseSpace Web interface is able to display a relationship between your appresult and an existing Sample. Such a relationship may be established by creating an `input.sample` property as follows:
+The BaseSpace Hub Web interface is able to display a relationship between your appresult and an existing Sample. Such a relationship may be established by creating an `input.sample` property as follows:
 
     <Enter the Properties directory of your new appresult>
     # Add Sample property
@@ -683,7 +683,7 @@ In case of failure, an explicit error message is issued.
 
 ### Renaming AppSessions
 
-When creating an appresult, BaseSpace automatically creates an associated appsession and automatically allocates it the name "BaseSpaceCLI - {creation time}".  
+When creating an appresult, BaseSpace Hub automatically creates an associated appsession and automatically allocates it the name "BaseSpaceCLI - {creation time}".  
 If you wish to choose a different name to organise your workspace more effectively, you can use the `mv` command in the AppSessions directory to rename appsessions.
 
 
@@ -699,7 +699,7 @@ This list of commands will vary, based on your current directory, for example `m
 The `basemount-cmd` tool was introduced to:
 
  - Enable bi-directional communication between the user and BaseMount (typical filesystem commands such as `cat`, `echo`, etc. only read or write to a file, but can't return explicit information or error messages conveniently)
- - Give a higher level of abstraction for certain commands, allowing to group multiple filesystem commands, which are intentionally kept at the same granularity as the BaseSpace API
+ - Give a higher level of abstraction for certain commands, allowing to group multiple filesystem commands, which are intentionally kept at the same granularity as the BaseSpace Hub API
  - Give access to bash-completion (the ability to see the list of commands by typing `basemount-cmd <TAB><TAB>`)
 
 
@@ -735,12 +735,12 @@ Note: Commands that are not listed here are "use at your own risk", and may disa
 
 ## Limitations of BaseMount *Alpha*
 
-Each new directory access made by BaseMount relies on the local FUSE device (/dev/fuse), the BaseSpace API and the user's credentials. This mechanism means that, as currently available, BaseMount does not support the following types of accesses:
+Each new directory access made by BaseMount relies on the local FUSE device (/dev/fuse), the BaseSpace Hub API and the user's credentials. This mechanism means that, as currently available, BaseMount does not support the following types of accesses:
 
 - Cluster access, where many compute nodes can access the files. FUSE-mounted filesystems are per-host and cannot be accessed from other hosts without additional infrastructure.
 - BaseMount doesn't refresh files or directories. In order to reflect changes done via the Web GUI in your command line tree, you currently need to unmount (`basemount --unmount <mountpoint>`) and restart BaseMount.
 - In general, lots of concurrent requests can cause stability issues on a resource-constrained system.  Keep in mind, this is an early release and stability will increase.
-- If you have terabytes of data in BaseSpace, doing a "find" command or recursive "ls" or recursive "grep" on the mount is not recommended: it is likely to start consuming many GB of RAM and crash when the RAM runs out. Yes, we'll handle this better soon!
+- If you have terabytes of data in BaseSpace Hub, doing a "find" command or recursive "ls" or recursive "grep" on the mount is not recommended: it is likely to start consuming many GB of RAM and crash when the RAM runs out. Yes, we'll handle this better soon!
 
 
 
@@ -870,7 +870,7 @@ The default configuration used in BaseMount is:
 	NumberOfBlocksToPurgeOnCacheFull = 20
 
 
-The default configuration used by BaseSpace Native Apps running on Amazon instances is:
+The default configuration used by BaseSpace Hub Native Apps running on Amazon instances is:
 
     [BSFS]
 	LruCacheMode = SparseFile
@@ -1055,4 +1055,4 @@ You can discover which versions of BaseMount are available with the following co
 
 ## Feedback
 
-Please visit our [BaseSpace google group](https://groups.google.com/forum/#!forum/basespace-developers) for inquiries and to submit feedback. 
+Please visit our [BaseSpace Hub google group](https://groups.google.com/forum/#!forum/basespace-developers) for inquiries and to submit feedback. 

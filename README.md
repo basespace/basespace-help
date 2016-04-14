@@ -1,7 +1,7 @@
 basespace-help
 ==============
 
-BaseSpace Docs Repo
+BaseSpace Hub Docs Repo
 
 Conventions
 ------------

@@ -10,7 +10,7 @@ Sharing using the "Get Link" option allows you to share a Project or a Run with 
 **For Projects**:
 
 {% step 1, /images/tutorials/projects-tab_1365x519.png, Select Project %}
-Select the "Projects" icon from the BaseSpace home page and select the desired Project.
+Select the "Projects" icon from the BaseSpace Hub home page and select the desired Project.
 {% endstep %}
 
 {% step 2, /images/tutorials/share-analysis-getlink-selector_1366x403.png, Click Getlink %}

@@ -18,7 +18,7 @@ Windows recognizes VCF files as an Outlook contact file. Do not open VCF files i
 {% endcallout %}
 
 ###How to use it
-If you use an app in BaseSpace that uses VCF files as input, the app locates the file when launched. If using VCF files in other tools, download the file to use it in the external tool.
+If you use an app in BaseSpace Hub that uses VCF files as input, the app locates the file when launched. If using VCF files in other tools, download the file to use it in the external tool.
 
 ---
 ##Detailed Description

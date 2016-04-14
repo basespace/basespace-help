@@ -4,7 +4,7 @@ title: How to Upload data using the Web Uploader
 hide_welcome_banner: true
 ---
 
-BaseSpace recently made a data upload feature available to upload data that was previously generated on Illumina sequencing instruments. This simple-to-use feature is accessible from any project to which you have write access. The following steps explain the process:
+BaseSpace Hub recently made a data upload feature available to upload data that was previously generated on Illumina sequencing instruments. This simple-to-use feature is accessible from any project to which you have write access. The following steps explain the process:
 <br />
 <br />
 {% step 1, /images/tutorials/web-uploader-import-button_767x270.png, Choose Project %}
@@ -37,12 +37,12 @@ FASTQ files need to adhere to Illumina standards, as specified below:
 You will then see a progress bar as the file/s are uploaded. If there are any problems with the upload, respective notification will be displayed soon after the operation is completed. The upload progress can be cancelled at any point as shown below. Also, all the details pertaining to the upload session can be viewed at the bottom left.
 {% endstep %}  
 
-{% step 4, /images/tutorials/web-uploader-import-success_767x406.png, Add to Basespace %}
-Once the progress bar completes, you can add additional files. Also, before completing the import, you can set the sample name and associate a genome with the sample in the upper left hand side of the screen. Once you have imported all of the files and the files complete uploading, you will need to click on the  “Add to Basespace” button (shown above) to complete the session.
+{% step 4, /images/tutorials/web-uploader-import-success_767x406.png, Add to Basespace Hub %}
+Once the progress bar completes, you can add additional files. Also, before completing the import, you can set the sample name and associate a genome with the sample in the upper left hand side of the screen. Once you have imported all of the files and the files complete uploading, you will need to click on the  “Add to Basespace Hub” button (shown above) to complete the session.
 {% endstep %}  
 
 {% callout note, NOTE %}
-You can also click the "Add to Basespace" button at any point (even before all the files complete uploading).Once you have added all the files and are satisfied with the name and other metadata (genome, etc.) of the sample, you can click the "Add to Basespace" button. This "locks down" the import. You can no longer make any changes to it (i.e. change name, add/remove files) but the import will complete the second the last file is uploaded and there are no errors with any of the files and no further interaction on your part is required. Also, even if you never click the button the upload will auto-complete after five minutes of inactivity after the last file is uploaded.
+You can also click the "Add to Basespace Hub" button at any point (even before all the files complete uploading).Once you have added all the files and are satisfied with the name and other metadata (genome, etc.) of the sample, you can click the "Add to Basespace Hub" button. This "locks down" the import. You can no longer make any changes to it (i.e. change name, add/remove files) but the import will complete the second the last file is uploaded and there are no errors with any of the files and no further interaction on your part is required. Also, even if you never click the button the upload will auto-complete after five minutes of inactivity after the last file is uploaded.
 You are still required to stay on this page (leave it open) the entire time files are uploading.
 {% endcallout %}
 

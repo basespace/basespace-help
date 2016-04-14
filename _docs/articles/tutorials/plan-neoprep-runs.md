@@ -6,7 +6,7 @@ hide_welcome_banner: true
 
 NeoPrep is another option available via the Prep Tab which allows you to plan a run for the NeoPrep instrument.  If you do not have a NeoPrep instrument, you will not see this option in the Prep Tab.
 
-In order to get to the NeoPrep area of BaseSpace, start by clicking **Prep** in the header.  Now, you will see a **NeoPrep** option above the normal Prep tab workflow.  Click on **NeoPrep**.
+In order to get to the NeoPrep area of BaseSpace Hub, start by clicking **Prep** in the header.  Now, you will see a **NeoPrep** option above the normal Prep tab workflow.  Click on **NeoPrep**.
 <br />
 <br />
 {% step 1, /images/tutorials/plan-neoprep-runs-step1.png, Select NeoPrep %}
@@ -40,7 +40,7 @@ From the NeoPrep run management screen, select **Create New Run** on the right
 {% endstep %}
 
 {% callout note, NOTE %}
-If your Biological Sample does not exist, you can create one here.  Simply select the Sample in BaseSpace and specify the Name, Species, and Nucleic Acid for the Sample.  Once that information in entered, you can click **Create** to create and select that Biological Sample.
+If your Biological Sample does not exist, you can create one here.  Simply select the Sample in BaseSpace Hub and specify the Name, Species, and Nucleic Acid for the Sample.  Once that information in entered, you can click **Create** to create and select that Biological Sample.
 {% endcallout %}
 
 {% step 5, /images/tutorials/plan-neoprep-runs-step5.png, Configure Run - Part 3 - Review the Run %}
@@ -67,6 +67,6 @@ Once the Run is started, you will be taken to the Run Report where there is more
 {% endstep %}
 
 {% callout note, NOTE %}
-Alternatively, you can create Biological Samples in BaseSpace before step 4 above by following the instructions in [Create a new Biological Sample](/articles/tutorials/create-new-biological-samples/) or import one using the instructions in [How to Import Biological Samples](/articles/tutorials/import-biological-samples/).
+Alternatively, you can create Biological Samples in BaseSpace Hub before step 4 above by following the instructions in [Create a new Biological Sample](/articles/tutorials/create-new-biological-samples/) or import one using the instructions in [How to Import Biological Samples](/articles/tutorials/import-biological-samples/).
 {% endcallout %}
 

@@ -1,13 +1,13 @@
 ---
 layout: article
-title: Understanding Run Charts in BaseSpace
+title: Understanding Run Charts in BaseSpace Hub
 hide_welcome_banner: true
 ---
 -----------------------
 
 # Runs Charts
 
-This article covers the different charts found in the **Charts** section for a Run.  The charts are updated in real-time as the Run is sequenced on the machine and streamed up to BaseSpace, they allow you to easily monitor your Run's quality.  There are five charts that are available in the Runs Charts section:
+This article covers the different charts found in the **Charts** section for a Run.  The charts are updated in real-time as the Run is sequenced on the machine and streamed up to BaseSpace Hub, they allow you to easily monitor your Run's quality.  There are five charts that are available in the Runs Charts section:
 
 * Flow Cell Chart
 * Data by Cycle Plot

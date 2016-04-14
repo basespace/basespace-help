@@ -3,7 +3,7 @@ layout: article
 title: How to use Search
 hide_welcome_banner: true
 ---
-Basespace has an efficient search feature that lets the users easily find the required files/items.
+Basespace Hub has an efficient search feature that lets the users easily find the required files/items.
 <br />
 <br />
 {% step 1, /images/tutorials/search-icon-window_1038x298.png, Search icon %}

@@ -5,7 +5,7 @@ title: FASTQ Files
 
 ##Introduction
 ###What is it?
-BaseSpace converts *.bcl files into FASTQ files, which contain base call and quality information for all reads passing filtering.
+BaseSpace Hub converts *.bcl files into FASTQ files, which contain base call and quality information for all reads passing filtering.
 
 ###When to use it.
 FASTQ files can be used as sequence input for alignment and other secondary analysis software.
@@ -14,7 +14,7 @@ FASTQ files can be used as sequence input for alignment and other secondary anal
 Do not use it with tools that are not compatible with the FASTQ format.
 
 ###How to use it
-BaseSpace automatically generates FASTQ files in sample sheet-driven workflow apps. Other apps that perform alignment and variant calling also automatically use FASTQ files.
+BaseSpace Hub automatically generates FASTQ files in sample sheet-driven workflow apps. Other apps that perform alignment and variant calling also automatically use FASTQ files.
 
 ---
 ##Detailed Description

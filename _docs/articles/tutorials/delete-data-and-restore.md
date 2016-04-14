@@ -5,16 +5,16 @@ hide_welcome_banner: true
 ---
 
 {% callout note, NOTE %}
-Within BaseSpace, users are able to manage the data in their accounts through a few mechanisms, one of which is the ability to Delete.
+Within  Hub, users are able to manage the data in their accounts through a few mechanisms, one of which is the ability to Delete.
 
-BaseSpace Users have the ability to delete:
+BaseSpace Hub Users have the ability to delete:
 
 - Runs
 - Projects
 - Samples
 - Analyses
 
-In order to delete any data from BaseSpace, you must be the owner.  If you delete something that you do not own, it will be removed from your account and you will no longer be a collaborator for that dataset.
+In order to delete any data from BaseSpace Hub, you must be the owner.  If you delete something that you do not own, it will be removed from your account and you will no longer be a collaborator for that dataset.
 {% endcallout %}
 <br />
 **For Analyses**:
@@ -43,7 +43,7 @@ Select the "Runs" icon and select the desired run. Now, click on the **Move to T
 
 **For Projects**:
 
-There are two ways to delete a Project within BaseSpace:
+There are two ways to delete a Project within BaseSpace Hub:
 
 **From the Projects list page**
 

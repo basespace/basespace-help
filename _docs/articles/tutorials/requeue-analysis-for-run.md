@@ -4,10 +4,10 @@ title: How to Requeue Analysis for a Run
 hide_welcome_banner: true
 ---
 
-In order to requeue the analysis for a Run, the user has to simply change the Sample Sheet within BaseSpace. This option is often used to fix errors in the sample sheet, to change analysis parameters, or to change indexing details. Errors in the sample sheet can prevent BaseSpace from processing a run. This option allows BaseSpace to finish the analysis.The first analysis was suboptimal. You can resubmit the sample sheet and requeue the run with new analysis parameters one time.	The index settings for samples were wrong. This option allows you to correct the settings.
+In order to requeue the analysis for a Run, the user has to simply change the Sample Sheet within BaseSpace Hub. This option is often used to fix errors in the sample sheet, to change analysis parameters, or to change indexing details. Errors in the sample sheet can prevent BaseSpace Hub from processing a run. This option allows BaseSpace Hub to finish the analysis.The first analysis was suboptimal. You can resubmit the sample sheet and requeue the run with new analysis parameters one time.	The index settings for samples were wrong. This option allows you to correct the settings.
 
 {% callout note, NOTE %}
-You can only submit a corrected sample sheet and requeue the run one time.  If you need to requeue a Run again for any reason, please contact BaseSpace Support.
+You can only submit a corrected sample sheet and requeue the run one time.  If you need to requeue a Run again for any reason, please contact BaseSpace Hub Support.
 {% endcallout %}
 <br />
 
@@ -26,8 +26,8 @@ Go to a run, select the More drop-down list, and then select Fix Sample Sheet.
 {% endstep %}
 
 {% step 3, /images/tutorials/requeue-fix-sample-sheet-edit-options_1351x461.png, Edit Sample sheet %}
-The Fix Sample Sheet page opens. If BaseSpace has detected an error, it shows the issue above the black sample sheet editor. Depending on the complexity of the change, you have two options:
-	1. Easy fix: edit the sample sheet in the sample sheet editor. BaseSpace keeps validating the sample sheet as you edit; any remaining issues are displayed above the sample sheet editor.
+The Fix Sample Sheet page opens. If BaseSpace Hub has detected an error, it shows the issue above the black sample sheet editor. Depending on the complexity of the change, you have two options:
+	1. Easy fix: edit the sample sheet in the sample sheet editor. BaseSpace Hub keeps validating the sample sheet as you edit; any remaining issues are displayed above the sample sheet editor.
 	2. More complex change: use Illumina Experiment Manager (IEM).
 {% endstep %}
 
@@ -35,13 +35,13 @@ If you have not installed IEM yet, click the Illumina Experiment Manager (IEM) l
 
 - Open IEM.
 - Import the original sample sheet from your system in IEM and edit it, or generate a new sample sheet. See the Illumina Experiment Manager User Guide for instructions.
-- Copy and paste the sample sheet into the Sample Sheet Editor in BaseSpace.
-BaseSpace validates the sample sheet; any issues are displayed above the sample sheet editor.
+- Copy and paste the sample sheet into the Sample Sheet Editor in BaseSpace Hub.
+BaseSpace Hub validates the sample sheet; any issues are displayed above the sample sheet editor.
 
 <br />
 
 {% step 4, /images/tutorials/requeue-analysis-success-notification_475x101.png, Success Notification %}
-When you are done editing and the sample sheet is valid, click the Queue Analysis button, and BaseSpace starts analyzing the run using the new sample sheet. You can only resubmit a sample sheet and requeue the run one time.
+When you are done editing and the sample sheet is valid, click the Queue Analysis button, and BaseSpace Hub starts analyzing the run using the new sample sheet. You can only resubmit a sample sheet and requeue the run one time.
 {% endstep %}
 
 {% callout troubleshoot, Troubleshooting %}
@@ -49,7 +49,7 @@ If your edits result in an invalid sample sheet, the Queue Analysis button is no
 {% endcallout %}
 
 {% callout code, Path code %}
-If a sample sheet is invalid, it could be because the genome path is not set up correctly. This situation is indicated through the Genome Path Unknown Genome warning (as in the example). The paths of the standard BaseSpace genomes have to conform to the following relative paths:
+If a sample sheet is invalid, it could be because the genome path is not set up correctly. This situation is indicated through the Genome Path Unknown Genome warning (as in the example). The paths of the standard BaseSpace Hub genomes have to conform to the following relative paths:
 
 	Arabidopsis_thaliana\NCBI\build9.1\Sequence\WholeGenomeFASTA
 	Bos_taurus\Ensembl\UMD3.1\Sequence\WholeGenomeFASTA

@@ -4,27 +4,27 @@ title: The iOS App for BaseSpace
 hide_welcome_banner: true
 ---
 
-The iOS app for BaseSpace makes it easier for you to browse through your Runs and Analyses in BaseSpace.  You can review metrics, charts, and other information about Runs and Analyses.  This article will cover the features available in the current version of the app.  The BaseSpace iOS app is available in the  [iTunes App Store](https://itunes.apple.com/us/app/keynote/id942794217?mt=8), try it out for yourself!
+The iOS app for BaseSpace Hub makes it easier for you to browse through your Runs and Analyses in BaseSpace Hub.  You can review metrics, charts, and other information about Runs and Analyses.  This article will cover the features available in the current version of the app.  The BaseSpace iOS app is available in the  [iTunes App Store](https://itunes.apple.com/us/app/keynote/id942794217?mt=8), try it out for yourself!
 
 ##Log in to the iOS App
 
-When you first launch the app, you will be asked to log in using your BaseSpace credentials.  Once you have logged in, you will be taken directly to the Runs list page.
+When you first launch the app, you will be asked to log in using your BaseSpace Hub credentials.  Once you have logged in, you will be taken directly to the Runs list page.
 
 To log in as a different user, you'll need to log out of the app first.
 
 ##Log out of the iOS App
 
-At some point, you may want to log out of the BaseSpace iOS app and even log into a different account.  In order to do this, simply: 
+At some point, you may want to log out of the BaseSpace Hub iOS app and even log into a different account.  In order to do this, simply: 
 
 * Tap the **Settings** icon ![Settings Icon](/images/mobile-ios/settings.png) in the top right corner of the app, then
-* Tap the large red **Log out** button to log out of your BaseSpace account in the app
+* Tap the large red **Log out** button to log out of your BaseSpace Hub account in the app
 
 ##Turn push notifications on/off
 
-The iOS app for BaseSpace comes preconfigured with push notifications enabled.  Follow these instructions to turn off push notifications:
+The iOS app for BaseSpace Hub comes preconfigured with push notifications enabled.  Follow these instructions to turn off push notifications:
 
 * On your device, tap **Settings**.
-* Tap **Notifications** and find the BaseSpace app in the list.
+* Tap **Notifications** and find the BaseSpace Hub app in the list.
 * Open the app, then turn **Allow Notifications** on or off.
 
 ##View your list of Runs
@@ -95,4 +95,4 @@ Tap the **Notifications** icon to view notifications related to your Runs and An
 
 ##Supported Version(s)
 
-The iOS BaseSpace App is supported on any device running iOS version 8.4 or newer.  This includes the iPhone 4S and later, and iPad 2 and later devices.
+The iOS BaseSpace Hub App is supported on any device running iOS version 8.4 or newer.  This includes the iPhone 4S and later, and iPad 2 and later devices.
