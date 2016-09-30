@@ -15,4 +15,4 @@ With an Enterprise subscription, an Illumina representative creates a domain and
 
 The domain administrator can access and administer any workgroups in the domain. <!---See [Domain Administration](/articles/descriptive/domain-administration) for more information.--->
 
-{% callout note, NOTE %}Users in your workgroup may incur costs related to data storage, compute, and analysis. To share project and run data only, use the [Get Link](/articles/tutorials/share-data-using-get-link) or [Share](/articles/tutorials/share-data-using-email) options.{% end callout %}
+{% callout note, NOTE %}Users in your workgroup may incur costs related to data storage, compute, and analysis. To share project and run data only, use the [Get Link](/articles/tutorials/share-data-using-get-link) or [Share](/articles/tutorials/share-data-using-email) options.{% endcallout %}
