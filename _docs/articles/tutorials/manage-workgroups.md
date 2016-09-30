@@ -18,7 +18,7 @@ With an Enterprise subscription, the domain administrator can create multiple wo
 </li>
  <li>Click Create.</li></ol>
 
-{% callout note, NOTE %}Users in your workgroup may incur costs related to data storage, compute, and analysis. To share project and run data only, use the [Get Link](/articles/tutorials/share-data-using-get-link) or [Share](/articles/tutorials/share-data-using-email) options.{% end callout %}
+{% callout note, NOTE %}Users in your workgroup may incur costs related to data storage, compute, and analysis. To share project and run data only, use the [Get Link](/articles/tutorials/share-data-using-get-link) or [Share](/articles/tutorials/share-data-using-email) options.{% endcallout %}
 
 ##Add Users to a Workgroup
 The workgroup administrator adds users to a workgroup. A workgroup can contain an unlimited number of users.
