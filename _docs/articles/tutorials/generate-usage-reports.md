@@ -4,11 +4,12 @@ title: Generate Usage Reports
 hide_welcome_banner: true
 ---
 
+
 Generate reports of application usage and account activity. 
 1. Under Settings, click **Usage Report**. 
 
-2. Click the Available Reports drop-down arrow, and select a report type:
-	+ **General Usage Report**—An overview of the application usage. The report includes the following columns.
+2. Click the **Available Reports** drop-down arrow, and select a report type:
+   + **General Usage Report**—An overview of the application usage. The report includes the following columns.
      + **User Name**—The name of the user.
      + **Total Sessions**—The number of successful login sessions.
      + **Last Login**—The last time the user logged in.
@@ -23,10 +24,15 @@ Generate reports of application usage and account activity.
      + **User-email**—The email address of the user.
      + **Domain-name**—The name of the enterprise domain the user belongs to. 
      + **Event-type**—The type of login event. 
+
 3. Select a date range for the report.<ol type="a">
-	<li>In the **From** field, select the start date.</li>
-	<li>In the **To** field, select the end date.</li>
-4. In the **Email To** field, enter the email addresses of one or more recipients. Separate each address by a comma. 
+
+   <li>In the **From** field, select the start date.</li>
+
+   <li>In the **To** field, select the end date.</li></ol>
+
+4. In the **Email To** field, enter the email addresses of one or more recipients. Separate each address by a comma.
 
 5. Click **Email Reports**.
+
    The report is generated and emailed to the specified recipients. 

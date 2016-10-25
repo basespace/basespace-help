@@ -28,7 +28,7 @@ View user account details and verify whether a user is active in the domain. You
 1. Under User Management, click **User State**.
 2. In the Set User State window, enter the user's email address, and click **Check**.
 3. To expire a user account, select the **Expire User** checkbox, and click **Save**.
-4. To restore an expired user account, clear the **Expire User** checkbox, and click Save.
+4. To restore an expired user account, clear the **Expire User** checkbox, and click **Save**.
 
 ##Manage Administrators##
 
