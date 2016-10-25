@@ -9,3 +9,5 @@ Access your domain account using the URL provided by Illumina. The following dom
 - [User Management](/articles/tutorials/manage-domain-users)
 - [Password Management](/articles/tutorials/manage-password-parameters)
 - [Session Management](/articles/tutorials/manage-user-sessions)
+- [Usage Reports](/articles/tutorials/generate-user-reports)
+

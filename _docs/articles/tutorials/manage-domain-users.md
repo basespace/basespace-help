@@ -2,9 +2,6 @@
 layout: article
 title: Manage Domain Users and Administrators
 ---
-
-# Manage Domain Users
-
 Use the User Management tab in the Settings window to view and manage users in your domain account. 
 
 ##View Users##
