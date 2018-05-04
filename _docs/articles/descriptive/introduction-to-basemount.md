@@ -14,7 +14,7 @@ title: Introduction To BaseMount
  - [Using BaseMount](#Mounting)
     - [Mounting, Authenticating, Unmounting](#Mounting)
        - [Authenticating with Workgroups](#AuthenticationWorkgroups)
-       - [Authenticating with Entreprise domains, EU servers, Onsite BSMS](#AuthenticationEntrepriseDomains)
+       - [Authenticating with Entreprise domains, other servers](#AuthenticationEntrepriseDomains)
     - [Directory Structure](#DirectoryStructure)
     - [Downloading Data](#DownloadingData)
     - [Writing and Uploading data](#WriteMode)
@@ -32,7 +32,7 @@ title: Introduction To BaseMount
 
 ## Overview
 
-The main mechanism to interact with your BaseSpace Sequence Hub data is via the website at [basespace.illumina.com](https://basespace.illumina.com). However, for some use-cases, it can be useful to work with the same data using the Linux command line interface (CLI). This allows direct ad-hoc programmatic access so that users can write ad-hoc scripts and use tools like find, xargs and command line loops to work with their data in bulk.
+The main mechanism to interact with your BaseSpace Sequence Hub (BSSH) data is via the website at [basespace.illumina.com](https://basespace.illumina.com). However, for some use-cases, it can be useful to work with the same data using the Linux command line interface (CLI). This allows direct ad-hoc programmatic access so that users can write ad-hoc scripts and use tools like find, xargs and command line loops to work with their data in bulk.
 
 This is the concept behind our BaseSpace Sequence Hub command line tool, [BaseMount](https://basemount.basespace.illumina.com "BaseMount"), a [FUSE driver](https://en.wikipedia.org/wiki/Filesystem_in_Userspace "FUSE userspace driver") that allows command line access to your [BaseSpace Sequence Hub](https://basespace.illumina.com "BaseSpace") data.
 
@@ -385,31 +385,23 @@ You cannot "switch workgroups" inside a BaseMount mount, but you can create mult
 
 <a name="AuthenticationEntrepriseDomains"></a>
 
-### Authenticating for Entreprise domains, EU servers, Onsite BSMS
+### Authenticating for Entreprise domains, other servers
 
     basemount [--config <config name>] --api-server <API URL or alias | help> <mount-point>
 
-Similarly to Workgroups, accessing Entreprise domains, EU servers or onsite BSMS (BaseSpace Managed Solution) will lead you to use BaseMount's `--config` feature as you will usually deal with multiple accounts.
+Similarly to Workgroups, accessing Entreprise domains, or other basespace servers will lead you to use BaseMount's `--config` feature as you will usually deal with multiple accounts.
 
-You will also need to use an additional command-line parameter: `--api-server <API URL or alias>`.  
-The API URL to pass there may be difficult to figure out. Here are some example to help you guess you own:
+You may also need to use an additional command-line parameter: `--api-server <API URL or alias>`.  
 
-  - `--api-server=https://api.basespace.illumina.com/` (Default US server)
-  - `--api-server=https://api.euc1.sh.basespace.illumina.com/` (EU server)
-  - `--api-server=https://api.cloud-hoth.illumina.com/` (Staging dev server)
+  - `--api-server=https://api.basespace.illumina.com/` US server (Default)
+  - `--api-server=https://api.euc1.sh.basespace.illumina.com/` EU server
 
+Please contact illumina support if you need assistance in identifying your API server URL.
 You can also run `basemount --api-server help` to get a list of known servers and their aliases.
 
-
-Note that for Entreprise domains, the API URL shouldn't actually include the subdomain name. However, it is really important that your browser is logged in to your subdomain before authenticating BaseMount. For example if you are a European customer with an Entreprise subdomain, your API URL will likely be `https://api.euc1.sh.basespace.illumina.com/` (no subdomain specified), but your browser must be showing the URL `https://MY_SUB_DOMAIN.euc1.sh.basespace.illumina.com`. If you type this URL while being logged in under the base BaseSpace domain, your browser will mistakenly redirect you outside your entreprise domain. You need to explicitely log out and re-enter the correct subdomain URL before logging in.
-
-
-If you really can't identify your API URL, you can find it by opening your entreprise basespace website in the Chrome browser, open the Developer Tools (Ctrl+Shift+I), select the Network tab, click on the XHR request type, reload the page (Ctrl+R) and look at the logged entries. Most of these entries will show the API URL. Make sure you include the https:// part of it.
-
+Note that for Entreprise domains, the API URL doesn't actually include the subdomain name. However, it is important that your browser is logged in to your subdomain before authenticating BaseMount. For example if you are a European customer with an Entreprise subdomain, your API URL will likely be `https://api.euc1.sh.basespace.illumina.com/` (no subdomain specified), but your browser must be showing the URL `https://MY_SUB_DOMAIN.euc1.sh.basespace.illumina.com`. If you type this URL while being logged in under the base BaseSpace public domain, your browser will mistakenly redirect you outside your entreprise domain. You need to explicitely log out and re-enter the correct subdomain URL before logging in.
 
 Once authenticated, BaseMount will store the API server URL for all subsequent mounts using this config.
-
-
 
 <a name="Unmounting"></a>
 
@@ -753,7 +745,7 @@ The upload will automatically be multi-threaded, with a default of 8 threads per
 
 Note: Uploaded blocks are validated using their MD5 sums.  
 (Note 2: Run upload is not supported yet)  
-(Note 3: For Sample upload, please use the BaseSpaceCLI tools, which are implementing FASTQ validation)
+(Note 3: For Sample upload, please use the BaseSpaceCLI tools, which include FASTQ validation)
 
 
 ### Property editing
@@ -818,7 +810,7 @@ If you wish to choose a different name to organise your workspace more effective
 
 ## Deleting data
 
-Starting with version 0.14, BaseMount can move data to&from the trash.
+Starting with version 0.14, BaseMount can move data to and from the trash.
 
 
 ### Warning about access token scopes
@@ -843,9 +835,9 @@ Warning: In case of success, the current directory will become invalid, as the e
 In case of error, the entity won't be deleted, and the error message will be added to the `.error` file in the current directory.
 
 
-### Move only large Run files to trash
+### Move base call Run files to trash
 
-With runs, users often wish to delete the large BCL files while retaining the BaseSpace entries and small files such as metrics and monitoring files.  
+With runs, users often wish to delete the large amount of base call data while retaining the BaseSpace entries and small files such as metrics and monitoring files.  
 
 This is achieved with `basemount-cmd move-to-trash-preserve-metadata`, which deletes only the Data directory from the run, preserving the entity and the other files.
 
@@ -891,13 +883,12 @@ Please contact our support team if needed.
 
 ## BaseMount with v2 API
 
-In July 2017, BaseSpace Sequence Hub launched its v2 API. 
+BaseSpace Sequence Hub has two parallel API versions, v1 and v2. The main differences are that v1 exposes Samples (collections of FASTQ files) and AppResults (generic collections of files from apps). v2 contains Datasets (any collection of files) and Biosamples (sample metadata and pointers to FASTQ Datasets). 
 AppResults and Samples that were created with the v1 API are transparently exposed as v2 Datasets and BioSamples, which can then be augmented with some new metadata, attributes, etc.
 
 In order to use the v2 API with BaseMount you can launch:
 
    `basemount --use-v2-api`
-
 
 
 <a name="BasemountCmd"></a>
@@ -970,7 +961,7 @@ Each new directory access made by BaseMount relies on the local FUSE device (/de
 
 - Cluster access, where many compute nodes can access the files. FUSE-mounted filesystems are per-host and cannot be accessed from other hosts without additional infrastructure.
 - In general, lots of concurrent requests can cause stability issues on a resource-constrained system.  Keep in mind, this is an early release and stability will increase.
-- If you have terabytes of data in BaseSpace, doing a "find" command or recursive "ls" or recursive "grep" on the mount is not recommended: it is likely to start consuming many GB of RAM and crash when the RAM runs out. Yes, we'll handle this better soon!
+- If you have terabytes of data in BaseSpace, doing a "find" command or recursive "ls" or recursive "grep" on the mount is not recommended: it is likely to start consuming many GB of RAM and may crash when the memory runs out. 
 
 
 
