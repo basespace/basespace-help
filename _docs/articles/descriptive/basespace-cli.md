@@ -4,7 +4,7 @@ title: BaseSpace Sequence Hub Command Line Interface
 ---
 
 {% callout troubleshoot, This version of BaseSpaceCLI is obsolete! %}
-This page documents the V1 BaseSpaceCLI which has now been superseded by the [V2 BaseSpaceCLI](https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview).
+This page documents the python BaseSpaceCLI which has now been superseded by the [supported 1.0 version of BaseSpaceCLI](https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview).
 {% endcallout %}
 
 
