@@ -1,3 +1,8 @@
+---
+layout: article
+title: BaseSpace Sequence Hub Command Line Interface
+---
+
 # BaseSpace CLI Documentation
 
 BaseSpace CLI documentaion is now [here](https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview).
