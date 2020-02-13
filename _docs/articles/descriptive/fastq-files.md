@@ -21,7 +21,7 @@ BaseSpace Sequence Hub automatically generates FASTQ files in sample sheet-drive
 ###Naming
 
 FASTQ files are named with the sample name and the sample number, which is a numeric assignment based on the order that the sample is listed in the sample sheet. 
-Example: Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
+Example: `Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz`
 
 - samplename—The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
 - S1—The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet.
