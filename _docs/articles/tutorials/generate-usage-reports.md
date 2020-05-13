@@ -10,8 +10,6 @@ Enterprise subscription accounts include usage history reports. Users and admini
 + Domain administrators can view and download usage history for all workgroups in the domain.
 + Workgroup administrators can view and download usage history for their workgroups.
 + All users can view and download their personal usage history.
-
-For more information about usage costs, see [iCredits and Billing](/articles/descriptive/icredits-and-billing).
  
 ----------------
 ##View Reports

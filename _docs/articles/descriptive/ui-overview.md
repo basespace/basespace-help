@@ -16,11 +16,11 @@ The BaseSpace Sequence Hub User Interface (UI) has a number of common UI element
 The following documentation describes the actions available in the header within BaseSpace Sequence Hub.
 
 
-###Dashboard tab
+### Dashboard tab
 {% screenshot /images/articles/dashboard-tab_200x132.png %}  
 After login, the first tab users see is the dashboard. The dashboard provides access to notifications, iCredits, and your latest runs, projects, and app results. The dashboard is always accessible in BaseSpace Sequence Hub from the button in the header.
 
-####Notifications
+#### Notifications
 This section shows notifications, with the most recent listed at the top. There are multiple types of notifications :
 
 * Collaborators
@@ -34,29 +34,26 @@ This section shows notifications, with the most recent listed at the top. There 
 	- New Demo data set
 	- Announcement of a new feature
 
-####Runs Pane
+#### Runs Pane
 
 The bottom left pane of the BaseSpace Sequence Hub dashboard shows the three most recent runs, and is updated automatically.
 Clicking the Runs pane opens the Runs tab. Clicking a run opens the Runs tab with the run loaded. 
 
-####Projects Pane
+#### Projects Pane
 
 The bottom middle pane of the BaseSpace Sequence Hub dashboard shows the three most recent projects. The folder icon indicates the sharing status of the project: if it shows several people , the project is shared. Clicking the Projects pane opens the Projects tab. Clicking a project opens the Projects tab with the project loaded. 
 
-####App Results Pane
+#### App Results Pane
 
 The right bottom pane of the BaseSpace Sequence Hub dashboard shows the most recent app results. Clicking an app result provides charts relevant for the app used in the Projects tab. For more information, see App Results Page.
 
-####iCredits
-All in-app purchases are performed using an Illumina currency called iCredits. Before a user can make any in-app purchases, they must add iCredits to their account by purchasing them through BaseSpace Sequence Hub. 1 iCredit can be purchased at a rate of 1 USD. 
-
 -----------------------
-###Prep tab
+### Prep tab
 {% screenshot /images/articles/prep-tab_121x128.png %}
 The Prep tab enables you to set up a sequencing run on the NextSeq sequencing system. This tab is only available for NextSeq sequencing systems at the moment. Other Illumina sequencing instruments use a sample sheet to provide sample information to BaseSpace Sequence Hub. 
 
 -----------------------
-###Runs tab
+### Runs tab
 {% screenshot /images/articles/runs-tab_129x129.png %}  
 The Runs button leads to the runs list, which allows you to sort your runs based on experiment name, state, workflow, created date, machine, and owner.
 
@@ -66,22 +63,22 @@ The Runs button leads to the runs list, which allows you to sort your runs based
 The Projects button opens a list of your projects. You can sort the list by name, last update, or owner. Clicking a project provides access to the app results and samples within that project.
 
 -----------------------
-###Apps tab
+### Apps tab
 {% screenshot /images/articles/apps-tab_127x132.png %}
 The Apps button leads to the Apps page, which provides an overview of the BaseSpace Sequence Hub applications that you can run.
 
 -----------------------
-###Public Data tab
+### Public Data tab
 {% screenshot /images/articles/public-data-tab_213x132.png %}
 The Public Data page provides an overview of the publicly available data sets that you can use. Clicking a data set provides more information for that set, and allows you to import the run or project. You can search for apps using the Search Public Data box, or filter by the research areas and categories listed on the right. 
 
 -----------------------
-###Search icon
+### Search icon
 {% screenshot /images/articles/search-icon_75x129.png %}
 The Search box allows you to find analyses, runs, projects, or samples. 
 
 -----------------------
-###Accounts tab
+### Accounts tab
 {% screenshot /images/articles/account-tab_313x133.png %}
 The Account drop-down list provides access to:
 
@@ -94,11 +91,11 @@ The Account drop-down list provides access to:
 - Sign out
 
 -----------------------
-##Contact Us button
+## Contact Us button
 BaseSpace Sequence Hub users can access Help, contact support or provide feedback almost instantly in the matter of few clicks. See [Contact Us](/articles/descriptive/help-and-support).
 
 -----------------------
-##Footer Links
+## Footer Links
 
 The bottom links provide access to more information:
 
