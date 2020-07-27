@@ -7,14 +7,9 @@
     <meta name="author" content="">
 
     <title>{% if page.title == blank %}site.title{% else %}{{ page.title }}{% endif %}</title>
- <!--   {% if page.title == "BaseSpace Sequence Hub Help" %}<meta http-equiv="refresh" content="0; url=https://support.illumina.com/help/BaseSpace_Sequence_Hub">{% else %}<meta name="test" content="this is a test">{% endif %}
-page.path= {{ page.path }}    
+   {% if page.title == "BaseSpace Sequence Hub Help" %}<meta http-equiv="refresh" content="100; url=https://support.illumina.com/help/BaseSpace_Sequence_Hub">{% else %}<meta name="test" content="this is a test">{% endif %}
+(% if page.path == "abcd" %} <meta name="test2" content={{page.path}}>{% else %}  <meta name="test3" content={{page.path}} {% endif %}
 sitebaseurl = {{ site.baseurl }}
-href= {{ window.location.href }}
-    url = {{ url }} 
-    PageTitle = {{ page.title }}
-    sitetitle = {{ site.title }}
-    pagebaseurl = {{ page.baseurl }} 
 -->
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
