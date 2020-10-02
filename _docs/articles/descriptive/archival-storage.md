@@ -51,7 +51,7 @@ BaseSpace Sequence Hub provides some read-only information about archived data.
 -	Projects that include archived data cannot be shared or transferred.
 
 ## CLI
-The CLI supports archive and restore using the commands bs archive and bs unarchive.
+The CLI supports archive and restore using the commands `bs archive` and `bs unarchive`.
 
 Use the following commands to archive and restore data.
 
