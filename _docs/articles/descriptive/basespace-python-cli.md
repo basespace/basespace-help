@@ -143,7 +143,7 @@ Unlike BaseMount, BaseSpaceCLI does not support access token encryption. This wo
 BaseSpace needed a platform update to support the generation of access tokens which permit app launch. If you have an older access token, such as one generated when BaseMount was originally released, this token may give an error message if you try to launch an app with the CLI. In this case, you should delete your access token (rm ~/.basespace/default.cfg) and reauthenticate.
 {% endcallout %}
 
-You can also authenticate against an alternative BaseSpace  instance (e.g. a BaseSpace  Onsite System) using the --api-server option:
+You can also authenticate against an alternative BaseSpace  instance (e.g. a different region) using the --api-server option:
 
     $ bs --config hoth authenticate --api-server https://api.cloud-hoth.illumina.com/
     # use "bs --config hoth" for successive commands to make use of this token
