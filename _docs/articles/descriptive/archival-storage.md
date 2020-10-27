@@ -4,8 +4,6 @@ title: Archival Storage
 hide_welcome_banner: true
 ---
 
-# Archival Storage
-
 Archival storage moves data into long-term archives with lower data storage rates. It is intended for data that must be retained and do not require immediate access.
 
 Data transfer to and from archival storage incurs additional fees per TB transferred in the move. Restoring data that have been archived for a short period of time can result in higher storage costs. 
@@ -18,7 +16,9 @@ Data transfer to and from archival storage incurs additional fees per TB transfe
     <tr><td>Restore from Archive</td><td>30.0 iCredit per TB per restore</td><td>Cost to move 1 TB from Archive back to Standard</td></tr>
 </table>
 
+
 For more information about storage costs, see the [iCredits information page](https://www.illumina.com/products/by-type/informatics-products/icredits.html).
+
 
 The following data can be archived:
 
