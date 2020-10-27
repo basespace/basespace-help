@@ -15,7 +15,7 @@ Data transfer to and from archival storage incurs additional fees per TB transfe
     <tr><td>Transfer to Archive</td><td>20.0 iCredit per TB per transfer</td><td>Cost to move 1 TB from Standard to Archive</td></tr>
     <tr><td>Restore from Archive</td><td>30.0 iCredit per TB per restore</td><td>Cost to move 1 TB from Archive back to Standard</td></tr>
 </table>
-<br><br>
+<br>
 
 For more information about storage costs, see the [iCredits information page](https://www.illumina.com/products/by-type/informatics-products/icredits.html).
 
