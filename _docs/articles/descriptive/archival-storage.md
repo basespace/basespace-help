@@ -8,7 +8,7 @@ Archival storage moves data into long-term archives with lower data storage rate
 
 Data transfer to and from archival storage incurs additional fees per TB transferred in the move. Restoring data that have been archived for a short period of time can result in higher storage costs. 
 
-<table>
+<table style="width:100%">
     <tr><th> Storage Product </th><th>Cost</th><th>Details</th></tr>
     <tr><td> Standard Storage </td><td> 22.5 iCredits per TB per month </td><td> Default, instant free access</td></tr>
     <tr><td> Archive Storage </td><td> 2.0 Credits per TB per month </td><td> Around 2 days to restore, costs below</td></tr>
