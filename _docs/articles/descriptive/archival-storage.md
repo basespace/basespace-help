@@ -50,8 +50,6 @@ Data are available to restore when the archive process is complete. Restoration 
 3.	In the Restore Data dialog, verify the items, and then select **Restore Data**.
 The restored data are available for use and charged at standard storage rates.
 
-> **NOTE** Sharing and transferring restored data or assets that contain restored data are currently disabled. These functions are intended for a future update.
-
 ## Archived Data
 BaseSpace Sequence Hub provides some read-only information about archived data.
 
